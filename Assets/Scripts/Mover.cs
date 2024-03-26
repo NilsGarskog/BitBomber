@@ -21,7 +21,7 @@ public class Mover : MonoBehaviour
     public AnimatedSpriteRenderer spriteRendererLeft;
     public AnimatedSpriteRenderer spriteRendererRight;
     public AnimatedSpriteRenderer spriteRendererDeath;
-    private AnimatedSpriteRenderer activeSpriteRenderer;
+    public AnimatedSpriteRenderer activeSpriteRenderer;
 
 
     private void Awake()
@@ -63,13 +63,6 @@ public class Mover : MonoBehaviour
             SetDirection(Vector2.zero, activeSpriteRenderer);
         }
 
-        /*
-        moveDirection = new Vector2(inputVector.x, inputVector.y);
-        moveDirection = transform.TransformDirection(moveDirection);
-        moveDirection *= moveSpeed;
-
-        controller.Move(moveDirection * Time.deltaTime);
-        */
     }
 
     private void FixedUpdate()
@@ -91,6 +84,7 @@ public class Mover : MonoBehaviour
 
         activeSpriteRenderer = spriteRenderer;
         activeSpriteRenderer.idle = newDirection == Vector2.zero;
+
     }
 
     private void OnTriggerEnter2D(Collider2D other)

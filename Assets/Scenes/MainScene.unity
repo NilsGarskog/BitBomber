@@ -765,7 +765,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &583234209
 Transform:
   m_ObjectHideFlags: 0
@@ -2067,6 +2067,7 @@ MonoBehaviour:
   spriteRendererLeft: {fileID: 847594467}
   spriteRendererRight: {fileID: 1663396004}
   spriteRendererDeath: {fileID: 746890512}
+  activeSpriteRenderer: {fileID: 0}
 --- !u!4 &741737185
 Transform:
   m_ObjectHideFlags: 0
@@ -2508,6 +2509,7 @@ MonoBehaviour:
   spriteRendererLeft: {fileID: 1625482823}
   spriteRendererRight: {fileID: 1972642218}
   spriteRendererDeath: {fileID: 649533061}
+  activeSpriteRenderer: {fileID: 0}
 --- !u!4 &1072776754
 Transform:
   m_ObjectHideFlags: 0
@@ -2565,6 +2567,7 @@ GameObject:
   - component: {fileID: 1074790602}
   - component: {fileID: 1074790601}
   - component: {fileID: 1074790603}
+  - component: {fileID: 1074790604}
   m_Layer: 3
   m_Name: Player 1
   m_TagString: Player
@@ -2591,6 +2594,7 @@ MonoBehaviour:
   spriteRendererLeft: {fileID: 1137203065}
   spriteRendererRight: {fileID: 515109280}
   spriteRendererDeath: {fileID: 214694781}
+  activeSpriteRenderer: {fileID: 0}
 --- !u!4 &1074790600
 Transform:
   m_ObjectHideFlags: 0
@@ -2696,6 +2700,22 @@ MonoBehaviour:
   explosionRadius: 1
   destructibleTiles: {fileID: 583234211}
   destructiblePrefab: {fileID: -2315999527288832478, guid: d2ca7b90bff45451fae4401935cf1439, type: 3}
+  playerIndex: 0
+--- !u!114 &1074790604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1074790596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83cb8e75076ed4bdc87551ef147a42f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arrowPrefab: {fileID: 8074300563558467349, guid: 9a65242dae76b436794dff6c856a2ca5, type: 3}
+  arrowSpeed: 15
+  arrowAmount: 10
   playerIndex: 0
 --- !u!1 &1137203063
 GameObject:
@@ -5874,6 +5894,7 @@ MonoBehaviour:
   spriteRendererLeft: {fileID: 1427203820}
   spriteRendererRight: {fileID: 366071652}
   spriteRendererDeath: {fileID: 2008425455}
+  activeSpriteRenderer: {fileID: 0}
 --- !u!4 &1874126766
 Transform:
   m_ObjectHideFlags: 0

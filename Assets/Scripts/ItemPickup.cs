@@ -9,6 +9,7 @@ public class ItemPickup : MonoBehaviour
         Extrabomb,
         BlastRadius,
         SpeedIncrease,
+        Extraarrow,
     }
 
     public ItemType Type;
@@ -25,8 +26,13 @@ public class ItemPickup : MonoBehaviour
             case ItemType.BlastRadius:
                 player.GetComponent<BombController>().explosionRadius += 1;
                 break;
+
             case ItemType.SpeedIncrease:
                 player.GetComponent<Mover>().moveSpeed += 1;
+                break;
+
+            case ItemType.Extraarrow:
+                player.GetComponent<BowController>().arrowsRemaining += 1;
                 break;
         }
         Destroy(gameObject);
