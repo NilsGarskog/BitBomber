@@ -204,7 +204,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 6
   m_Sprite: {fileID: 1075697095, guid: 6e318598cd39c4421b2049c650af0a28, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -325,7 +325,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 6
   m_Sprite: {fileID: -756155178, guid: 294d9203eccb44a1aa5610ab11b1b091, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -643,7 +643,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 6
   m_Sprite: {fileID: 53849152, guid: 294d9203eccb44a1aa5610ab11b1b091, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1955,6 +1955,7 @@ GameObject:
   - component: {fileID: 741737183}
   - component: {fileID: 741737182}
   - component: {fileID: 741737181}
+  - component: {fileID: 741737186}
   m_Layer: 3
   m_Name: Player 4
   m_TagString: Player
@@ -2067,6 +2068,7 @@ MonoBehaviour:
   spriteRendererLeft: {fileID: 847594467}
   spriteRendererRight: {fileID: 1663396004}
   spriteRendererDeath: {fileID: 746890512}
+  ghost: {fileID: 741737186}
 --- !u!4 &741737185
 Transform:
   m_ObjectHideFlags: 0
@@ -2087,6 +2089,22 @@ Transform:
   - {fileID: 746890514}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &741737186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 741737180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92e7f12c0a534c648a2a2efe7f15bd58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ghostDelay: 0
+  ghost: {fileID: 8915580174225068701, guid: 0ecc3bb3695552943b1b1db4eec39dbc, type: 3}
+  activeSpriteRenderer: {fileID: 0}
+  makeGhost: 0
 --- !u!1 &746890511
 GameObject:
   m_ObjectHideFlags: 0
@@ -2420,6 +2438,7 @@ GameObject:
   - component: {fileID: 1072776751}
   - component: {fileID: 1072776750}
   - component: {fileID: 1072776755}
+  - component: {fileID: 1072776756}
   m_Layer: 3
   m_Name: Player 2
   m_TagString: Player
@@ -2508,6 +2527,7 @@ MonoBehaviour:
   spriteRendererLeft: {fileID: 1625482823}
   spriteRendererRight: {fileID: 1972642218}
   spriteRendererDeath: {fileID: 649533061}
+  ghost: {fileID: 1072776756}
 --- !u!4 &1072776754
 Transform:
   m_ObjectHideFlags: 0
@@ -2552,6 +2572,22 @@ MonoBehaviour:
   destructibleTiles: {fileID: 583234211}
   destructiblePrefab: {fileID: -2315999527288832478, guid: d2ca7b90bff45451fae4401935cf1439, type: 3}
   playerIndex: 1
+--- !u!114 &1072776756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1072776748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92e7f12c0a534c648a2a2efe7f15bd58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ghostDelay: 0.2
+  ghost: {fileID: 8915580174225068701, guid: 0ecc3bb3695552943b1b1db4eec39dbc, type: 3}
+  activeSpriteRenderer: {fileID: 0}
+  makeGhost: 0
 --- !u!1 &1074790596
 GameObject:
   m_ObjectHideFlags: 0
@@ -2565,6 +2601,7 @@ GameObject:
   - component: {fileID: 1074790602}
   - component: {fileID: 1074790601}
   - component: {fileID: 1074790603}
+  - component: {fileID: 1074790604}
   m_Layer: 3
   m_Name: Player 1
   m_TagString: Player
@@ -2591,6 +2628,7 @@ MonoBehaviour:
   spriteRendererLeft: {fileID: 1137203065}
   spriteRendererRight: {fileID: 515109280}
   spriteRendererDeath: {fileID: 214694781}
+  ghost: {fileID: 1074790604}
 --- !u!4 &1074790600
 Transform:
   m_ObjectHideFlags: 0
@@ -2697,6 +2735,22 @@ MonoBehaviour:
   destructibleTiles: {fileID: 583234211}
   destructiblePrefab: {fileID: -2315999527288832478, guid: d2ca7b90bff45451fae4401935cf1439, type: 3}
   playerIndex: 0
+--- !u!114 &1074790604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1074790596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92e7f12c0a534c648a2a2efe7f15bd58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ghostDelay: 0.2
+  ghost: {fileID: 8915580174225068701, guid: 0ecc3bb3695552943b1b1db4eec39dbc, type: 3}
+  activeSpriteRenderer: {fileID: 0}
+  makeGhost: 0
 --- !u!1 &1137203063
 GameObject:
   m_ObjectHideFlags: 0
@@ -2791,7 +2845,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 6
   m_Sprite: {fileID: -1542701155, guid: 294d9203eccb44a1aa5610ab11b1b091, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5762,6 +5816,7 @@ GameObject:
   - component: {fileID: 1874126764}
   - component: {fileID: 1874126763}
   - component: {fileID: 1874126762}
+  - component: {fileID: 1874126767}
   m_Layer: 3
   m_Name: Player 3
   m_TagString: Player
@@ -5874,6 +5929,7 @@ MonoBehaviour:
   spriteRendererLeft: {fileID: 1427203820}
   spriteRendererRight: {fileID: 366071652}
   spriteRendererDeath: {fileID: 2008425455}
+  ghost: {fileID: 1874126767}
 --- !u!4 &1874126766
 Transform:
   m_ObjectHideFlags: 0
@@ -5894,6 +5950,22 @@ Transform:
   - {fileID: 2008425457}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1874126767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1874126761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92e7f12c0a534c648a2a2efe7f15bd58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ghostDelay: 0.2
+  ghost: {fileID: 8915580174225068701, guid: 0ecc3bb3695552943b1b1db4eec39dbc, type: 3}
+  activeSpriteRenderer: {fileID: 0}
+  makeGhost: 0
 --- !u!1 &1972642216
 GameObject:
   m_ObjectHideFlags: 0
@@ -6094,7 +6166,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 6
   m_Sprite: {fileID: 1172923793, guid: 294d9203eccb44a1aa5610ab11b1b091, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

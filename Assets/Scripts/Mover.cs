@@ -23,7 +23,7 @@ public class Mover : MonoBehaviour
     public AnimatedSpriteRenderer spriteRendererDeath;
     private AnimatedSpriteRenderer activeSpriteRenderer;
 
-
+    public Ghost ghost;
     private void Awake()
     {
         rigidbody = GetComponent<Rigidbody2D>();
@@ -45,22 +45,27 @@ public class Mover : MonoBehaviour
         if (inputVector == Vector2.up)
         {
             SetDirection(Vector2.up, spriteRendererUp);
+            ghost.makeGhost = true;
         }
         else if (inputVector == Vector2.down)
         {
             SetDirection(Vector2.down, spriteRendererDown);
+            ghost.makeGhost = true;
         }
         else if (inputVector == Vector2.left)
         {
             SetDirection(Vector2.left, spriteRendererLeft);
+            ghost.makeGhost = true;
         }
         else if (inputVector == Vector2.right)
         {
             SetDirection(Vector2.right, spriteRendererRight);
+            ghost.makeGhost = true;
         }
         else
         {
             SetDirection(Vector2.zero, activeSpriteRenderer);
+            ghost.makeGhost = false;
         }
 
         /*
@@ -91,6 +96,18 @@ public class Mover : MonoBehaviour
 
         activeSpriteRenderer = spriteRenderer;
         activeSpriteRenderer.idle = newDirection == Vector2.zero;
+        SpriteRenderer[] spriteRenderers = GetComponentsInChildren<SpriteRenderer>();
+
+
+        foreach (SpriteRenderer sr in spriteRenderers)
+        {
+            if (sr.enabled)
+            {
+
+                ghost.activeSpriteRenderer = sr;
+                break;
+            }
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
