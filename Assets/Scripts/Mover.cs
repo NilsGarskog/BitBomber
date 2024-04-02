@@ -6,6 +6,7 @@ public class Mover : MonoBehaviour
 {
     [SerializeField]
     public float moveSpeed = 5f;
+    public int healthLevel = 100;
 
     [SerializeField]
     private int playerIndex = 0;
