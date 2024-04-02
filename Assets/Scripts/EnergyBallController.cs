@@ -8,20 +8,14 @@ public class EnergyBallController : MonoBehaviour
 {
     [Header("EnergyBall")]
     public GameObject energyBallPrefab;
-    public int energyBallAmount = 1;
+    public int energyBallAmount = 0;
     private int energyBallsRemaining;
     public float energyBallSpeed = 15f;
 
     private Vector2 facingDirection = Vector2.zero;
-
+    
     private Mover mover;
     private PlayerInputHandler playerInputHandler;
-
-    // [Header("Explosion")]
-    // public Explosion explosionPrefab;
-    // public LayerMask explosionLayerMask;
-    // public float explosionDuration = 1f;
-    // public int explosionRadius = 1;
 
     [SerializeField]
     private int playerIndex = 0;
@@ -63,9 +57,6 @@ public class EnergyBallController : MonoBehaviour
         Rigidbody2D energyBallRb = energyBall.GetComponent<Rigidbody2D>();
         energyBallRb.velocity = facingDirection * energyBallSpeed;
         energyBallsRemaining--;
-
-        // Destroy(energyBall);
-        energyBallsRemaining++;
     }
 
     // private void Explode(Vector2 position, Vector2 direction, int length)
@@ -96,9 +87,6 @@ public class EnergyBallController : MonoBehaviour
 
     private IEnumerator SlowPlayerMovement(Mover mover, float duration, float slowFactor)
     {
-        // Store the original movement speed of the player
-        float originalSpeed = mover.moveSpeed;
-
         // Reduce the movement speed of the player
         mover.moveSpeed *= slowFactor;
 
@@ -106,7 +94,7 @@ public class EnergyBallController : MonoBehaviour
         yield return new WaitForSeconds(duration);
 
         // Restore the original movement speed of the player
-        mover.moveSpeed = originalSpeed;
+        mover.moveSpeed /= slowFactor;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -115,15 +103,15 @@ public class EnergyBallController : MonoBehaviour
         {
             Mover hitPlayerMover = mover.GetComponent<Mover>();
             int hitPlayerIndex = hitPlayerMover.GetPlayerIndex();
-            Debug.Log("Hit player index: " + hitPlayerIndex);
+            // Debug.Log("Hit player index: " + hitPlayerIndex);
 
-            StartCoroutine(SlowPlayerMovement(hitPlayerMover, 10f, 0.5f));
+            StartCoroutine(SlowPlayerMovement(hitPlayerMover, 5f, 0.5f));
 
             Destroy(other.gameObject);
         }
     }
 
-    public void AddenergyBall()
+    public void AddEnergyBall()
     {
         energyBallsRemaining++;
         energyBallAmount++;

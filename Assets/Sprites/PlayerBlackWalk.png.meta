@@ -3,7 +3,7 @@ guid: 4f84227d675bb42db9ee3cf4612d795b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -63,6 +64,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -74,6 +77,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -86,6 +90,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -98,6 +103,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -110,6 +116,20 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -462,25 +482,24 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      PlayerBlackWalk_9: -1635676956
-      PlayerBlackWalk_2: -883658014
-      PlayerBlackWalk_8: 1065265206
-      PlayerBlackWalk_12: 571323620
-      PlayerBlackWalk_11: 151283876
-      PlayerBlackWalk_13: -1810536883
-      PlayerBlackWalk_3: -12485282
-      PlayerBlackWalk_14: 1066825555
-      PlayerBlackWalk_4: -2048428395
-      PlayerBlackWalk_6: -1349708102
-      PlayerBlackWalk_7: 564071585
-      PlayerBlackWalk_5: -1308611454
-      PlayerBlackWalk_10: -1030998137
       PlayerBlackWalk_0: 548773352
       PlayerBlackWalk_1: 2099610307
+      PlayerBlackWalk_10: -1030998137
+      PlayerBlackWalk_11: 151283876
+      PlayerBlackWalk_12: 571323620
+      PlayerBlackWalk_13: -1810536883
+      PlayerBlackWalk_14: 1066825555
       PlayerBlackWalk_15: -922338371
-  spritePackingTag: 
+      PlayerBlackWalk_2: -883658014
+      PlayerBlackWalk_3: -12485282
+      PlayerBlackWalk_4: -2048428395
+      PlayerBlackWalk_5: -1308611454
+      PlayerBlackWalk_6: -1349708102
+      PlayerBlackWalk_7: 564071585
+      PlayerBlackWalk_8: 1065265206
+      PlayerBlackWalk_9: -1635676956
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

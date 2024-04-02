@@ -2101,7 +2101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   energyBallPrefab: {fileID: 9045377583163512534, guid: be7337aa345f76242b8a8317c62257da, type: 3}
-  energyBallAmount: 1
+  energyBallAmount: 0
   energyBallSpeed: 15
   playerIndex: 3
 --- !u!1 &746890511
@@ -2583,7 +2583,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   energyBallPrefab: {fileID: 9045377583163512534, guid: be7337aa345f76242b8a8317c62257da, type: 3}
-  energyBallAmount: 1
+  energyBallAmount: 0
   energyBallSpeed: 15
   playerIndex: 1
 --- !u!1 &1074790596
@@ -2745,7 +2745,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   energyBallPrefab: {fileID: 9045377583163512534, guid: be7337aa345f76242b8a8317c62257da, type: 3}
-  energyBallAmount: 1
+  energyBallAmount: 0
   energyBallSpeed: 15
   playerIndex: 0
 --- !u!1 &1137203063
@@ -5959,7 +5959,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   energyBallPrefab: {fileID: 9045377583163512534, guid: be7337aa345f76242b8a8317c62257da, type: 3}
-  energyBallAmount: 1
+  energyBallAmount: 0
   energyBallSpeed: 15
   playerIndex: 2
 --- !u!1 &1972642216
