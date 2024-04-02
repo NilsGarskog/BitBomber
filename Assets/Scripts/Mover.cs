@@ -99,12 +99,17 @@ public class Mover : MonoBehaviour
         {
             DeathSequence();
         }
+        if (other.gameObject.layer == LayerMask.NameToLayer("Skull"))
+        {
+            DeathSequence();
+        }
     }
 
     private void DeathSequence()
     {
         enabled = false;
         GetComponent<BombController>().enabled = false;
+        GetComponent<SkullController>().enabled = false;
 
         spriteRendererDown.enabled = false;
         spriteRendererUp.enabled = false;

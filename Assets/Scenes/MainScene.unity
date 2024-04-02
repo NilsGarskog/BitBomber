@@ -154,13 +154,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animationSprites:
-  - {fileID: 1075697095, guid: 6e318598cd39c4421b2049c650af0a28, type: 3}
-  - {fileID: -1258763863, guid: 6e318598cd39c4421b2049c650af0a28, type: 3}
-  - {fileID: 1288256456, guid: 6e318598cd39c4421b2049c650af0a28, type: 3}
-  - {fileID: -2014435679, guid: 6e318598cd39c4421b2049c650af0a28, type: 3}
-  - {fileID: -281175819, guid: 6e318598cd39c4421b2049c650af0a28, type: 3}
-  - {fileID: -2129112685, guid: 6e318598cd39c4421b2049c650af0a28, type: 3}
-  idleSprite: {fileID: 1075697095, guid: 6e318598cd39c4421b2049c650af0a28, type: 3}
+  - {fileID: 4629102776833194587, guid: 3774e1f5cddef2943b896271038a5aac, type: 3}
+  - {fileID: -2009446687430213521, guid: 3774e1f5cddef2943b896271038a5aac, type: 3}
+  - {fileID: 7602639860154857055, guid: 3774e1f5cddef2943b896271038a5aac, type: 3}
+  - {fileID: -6326407827460114621, guid: 3774e1f5cddef2943b896271038a5aac, type: 3}
+  - {fileID: 1789325195210690200, guid: 3774e1f5cddef2943b896271038a5aac, type: 3}
+  - {fileID: -525963176204665843, guid: 3774e1f5cddef2943b896271038a5aac, type: 3}
+  - {fileID: 2789880030306104200, guid: 3774e1f5cddef2943b896271038a5aac, type: 3}
+  - {fileID: 2789880030306104200, guid: 3774e1f5cddef2943b896271038a5aac, type: 3}
+  - {fileID: 2789880030306104200, guid: 3774e1f5cddef2943b896271038a5aac, type: 3}
+  idleSprite: {fileID: 4629102776833194587, guid: 3774e1f5cddef2943b896271038a5aac, type: 3}
   animationTime: 0.1666667
   loop: 0
   idle: 0
@@ -205,7 +208,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 1075697095, guid: 6e318598cd39c4421b2049c650af0a28, type: 3}
+  m_Sprite: {fileID: 4629102776833194587, guid: 3774e1f5cddef2943b896271038a5aac, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -277,11 +280,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animationSprites:
-  - {fileID: -756155178, guid: 294d9203eccb44a1aa5610ab11b1b091, type: 3}
-  - {fileID: -1384407184, guid: 294d9203eccb44a1aa5610ab11b1b091, type: 3}
-  - {fileID: 395752546, guid: 294d9203eccb44a1aa5610ab11b1b091, type: 3}
-  - {fileID: -1839955772, guid: 294d9203eccb44a1aa5610ab11b1b091, type: 3}
-  idleSprite: {fileID: -756155178, guid: 294d9203eccb44a1aa5610ab11b1b091, type: 3}
+  - {fileID: -4904792468843628744, guid: 09c30515d40b5c44b9e20a51a0d631fc, type: 3}
+  - {fileID: -4024333578772048422, guid: 09c30515d40b5c44b9e20a51a0d631fc, type: 3}
+  - {fileID: -6491824850376781497, guid: 09c30515d40b5c44b9e20a51a0d631fc, type: 3}
+  - {fileID: -8984494484864775880, guid: 09c30515d40b5c44b9e20a51a0d631fc, type: 3}
+  idleSprite: {fileID: -4904792468843628744, guid: 09c30515d40b5c44b9e20a51a0d631fc, type: 3}
   animationTime: 0.1666667
   loop: 1
   idle: 1
@@ -326,7 +329,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: -756155178, guid: 294d9203eccb44a1aa5610ab11b1b091, type: 3}
+  m_Sprite: {fileID: -4904792468843628744, guid: 09c30515d40b5c44b9e20a51a0d631fc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -595,11 +598,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animationSprites:
-  - {fileID: 53849152, guid: 294d9203eccb44a1aa5610ab11b1b091, type: 3}
-  - {fileID: -725755657, guid: 294d9203eccb44a1aa5610ab11b1b091, type: 3}
-  - {fileID: 186665868, guid: 294d9203eccb44a1aa5610ab11b1b091, type: 3}
-  - {fileID: -1669916470, guid: 294d9203eccb44a1aa5610ab11b1b091, type: 3}
-  idleSprite: {fileID: 53849152, guid: 294d9203eccb44a1aa5610ab11b1b091, type: 3}
+  - {fileID: -5208542426190215999, guid: 92ead0db245558842adf11cae3666b74, type: 3}
+  - {fileID: 2077263180513090823, guid: 92ead0db245558842adf11cae3666b74, type: 3}
+  - {fileID: -9019709659556527632, guid: 92ead0db245558842adf11cae3666b74, type: 3}
+  - {fileID: -4486663804160490766, guid: 92ead0db245558842adf11cae3666b74, type: 3}
+  idleSprite: {fileID: -5208542426190215999, guid: 92ead0db245558842adf11cae3666b74, type: 3}
   animationTime: 0.1666667
   loop: 1
   idle: 1
@@ -644,7 +647,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 53849152, guid: 294d9203eccb44a1aa5610ab11b1b091, type: 3}
+  m_Sprite: {fileID: -5208542426190215999, guid: 92ead0db245558842adf11cae3666b74, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1955,6 +1958,7 @@ GameObject:
   - component: {fileID: 741737183}
   - component: {fileID: 741737182}
   - component: {fileID: 741737181}
+  - component: {fileID: 741737186}
   m_Layer: 3
   m_Name: Player 4
   m_TagString: Player
@@ -2087,6 +2091,21 @@ Transform:
   - {fileID: 746890514}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &741737186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 741737180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4af4bf208d7d1cc4e89501609ad040bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skullPrefab: {fileID: 5779939424601068660, guid: 632851afd6197864795bebdaf74f5e99, type: 3}
+  skullsRemaining: 0
+  playerIndex: 3
 --- !u!1 &746890511
 GameObject:
   m_ObjectHideFlags: 0
@@ -2420,6 +2439,7 @@ GameObject:
   - component: {fileID: 1072776751}
   - component: {fileID: 1072776750}
   - component: {fileID: 1072776755}
+  - component: {fileID: 1072776756}
   m_Layer: 3
   m_Name: Player 2
   m_TagString: Player
@@ -2552,6 +2572,21 @@ MonoBehaviour:
   destructibleTiles: {fileID: 583234211}
   destructiblePrefab: {fileID: -2315999527288832478, guid: d2ca7b90bff45451fae4401935cf1439, type: 3}
   playerIndex: 1
+--- !u!114 &1072776756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1072776748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4af4bf208d7d1cc4e89501609ad040bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skullPrefab: {fileID: 5779939424601068660, guid: 632851afd6197864795bebdaf74f5e99, type: 3}
+  skullsRemaining: 0
+  playerIndex: 1
 --- !u!1 &1074790596
 GameObject:
   m_ObjectHideFlags: 0
@@ -2565,6 +2600,7 @@ GameObject:
   - component: {fileID: 1074790602}
   - component: {fileID: 1074790601}
   - component: {fileID: 1074790603}
+  - component: {fileID: 1074790604}
   m_Layer: 3
   m_Name: Player 1
   m_TagString: Player
@@ -2697,6 +2733,21 @@ MonoBehaviour:
   destructibleTiles: {fileID: 583234211}
   destructiblePrefab: {fileID: -2315999527288832478, guid: d2ca7b90bff45451fae4401935cf1439, type: 3}
   playerIndex: 0
+--- !u!114 &1074790604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1074790596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4af4bf208d7d1cc4e89501609ad040bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skullPrefab: {fileID: 5779939424601068660, guid: 632851afd6197864795bebdaf74f5e99, type: 3}
+  skullsRemaining: 1
+  playerIndex: 0
 --- !u!1 &1137203063
 GameObject:
   m_ObjectHideFlags: 0
@@ -2743,11 +2794,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animationSprites:
-  - {fileID: -1542701155, guid: 294d9203eccb44a1aa5610ab11b1b091, type: 3}
-  - {fileID: 392407918, guid: 294d9203eccb44a1aa5610ab11b1b091, type: 3}
-  - {fileID: 1717245951, guid: 294d9203eccb44a1aa5610ab11b1b091, type: 3}
-  - {fileID: 1380369761, guid: 294d9203eccb44a1aa5610ab11b1b091, type: 3}
-  idleSprite: {fileID: -1542701155, guid: 294d9203eccb44a1aa5610ab11b1b091, type: 3}
+  - {fileID: 6646980318564674546, guid: 8a50a2adb52a89e47bf0c53ad2e14640, type: 3}
+  - {fileID: 6475320810854282264, guid: 8a50a2adb52a89e47bf0c53ad2e14640, type: 3}
+  - {fileID: 2541484070623764381, guid: 8a50a2adb52a89e47bf0c53ad2e14640, type: 3}
+  - {fileID: -1680573042056619268, guid: 8a50a2adb52a89e47bf0c53ad2e14640, type: 3}
+  idleSprite: {fileID: 6646980318564674546, guid: 8a50a2adb52a89e47bf0c53ad2e14640, type: 3}
   animationTime: 0.1666667
   loop: 1
   idle: 1
@@ -2792,7 +2843,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: -1542701155, guid: 294d9203eccb44a1aa5610ab11b1b091, type: 3}
+  m_Sprite: {fileID: 6646980318564674546, guid: 8a50a2adb52a89e47bf0c53ad2e14640, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5762,6 +5813,7 @@ GameObject:
   - component: {fileID: 1874126764}
   - component: {fileID: 1874126763}
   - component: {fileID: 1874126762}
+  - component: {fileID: 1874126767}
   m_Layer: 3
   m_Name: Player 3
   m_TagString: Player
@@ -5894,6 +5946,21 @@ Transform:
   - {fileID: 2008425457}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1874126767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1874126761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4af4bf208d7d1cc4e89501609ad040bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skullPrefab: {fileID: 5779939424601068660, guid: 632851afd6197864795bebdaf74f5e99, type: 3}
+  skullsRemaining: 0
+  playerIndex: 2
 --- !u!1 &1972642216
 GameObject:
   m_ObjectHideFlags: 0
@@ -6046,11 +6113,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animationSprites:
-  - {fileID: -150945276, guid: 294d9203eccb44a1aa5610ab11b1b091, type: 3}
-  - {fileID: -1041607945, guid: 294d9203eccb44a1aa5610ab11b1b091, type: 3}
-  - {fileID: 1172923793, guid: 294d9203eccb44a1aa5610ab11b1b091, type: 3}
-  - {fileID: -1949454853, guid: 294d9203eccb44a1aa5610ab11b1b091, type: 3}
-  idleSprite: {fileID: 1172923793, guid: 294d9203eccb44a1aa5610ab11b1b091, type: 3}
+  - {fileID: 254301234467584262, guid: 600a4265e1967224c997c06361606739, type: 3}
+  - {fileID: -2597874858818917376, guid: 600a4265e1967224c997c06361606739, type: 3}
+  - {fileID: -5187083645861487878, guid: 600a4265e1967224c997c06361606739, type: 3}
+  - {fileID: -6659412188699336185, guid: 600a4265e1967224c997c06361606739, type: 3}
+  idleSprite: {fileID: 254301234467584262, guid: 600a4265e1967224c997c06361606739, type: 3}
   animationTime: 0.1666667
   loop: 1
   idle: 1
@@ -6095,7 +6162,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 1172923793, guid: 294d9203eccb44a1aa5610ab11b1b091, type: 3}
+  m_Sprite: {fileID: 254301234467584262, guid: 600a4265e1967224c997c06361606739, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
