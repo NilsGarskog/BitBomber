@@ -1,0 +1,1170 @@
+fileFormatVersion: 2
+guid: 623655aa373a44461b1490c698308989
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Snow Blossom_0
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 845
+        width: 84
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfb8e9bd13a95427195a4aee9f400175
+      internalID: 830011260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Snow Blossom_1
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 811.6667
+        width: 162.25
+        height: 162.33333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 989c0e2724fcd4233a23a2f7f4b4a302
+      internalID: -934621305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Snow Blossom_2
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 811.6667
+        width: 162.25
+        height: 162.33333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84e267d9095ce40e0a2c0461c49e8024
+      internalID: 73520980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Snow Blossom_3
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 811.6667
+        width: 162.25
+        height: 162.33333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f65914022078425f8906543dacb4f00
+      internalID: -652375553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Snow Blossom_4
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 811.6667
+        width: 162.25
+        height: 162.33333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c052dd7021b7747db862711e56e05542
+      internalID: -1510272644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Snow Blossom_5
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 811.6667
+        width: 162.25
+        height: 162.33333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89a9684e8f8774fe4a684b0d1022eef2
+      internalID: -1049986667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Snow Blossom_6
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 811.6667
+        width: 162.25
+        height: 162.33333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c8771d90fbc74416adc77dde5acfd97
+      internalID: -799380745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Snow Blossom_7
+      rect:
+        serializedVersion: 2
+        x: 1134
+        y: 811.6667
+        width: 162.25
+        height: 162.33333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb251f51f09bd40b095cc7fe499e8a2b
+      internalID: 42679765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Snow Blossom_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 649.6667
+        width: 162.25
+        height: 162.33333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c62c33180436449ba0a517572b32952
+      internalID: 1874588973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Snow Blossom_9
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 649.6667
+        width: 162.25
+        height: 162.33333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf4eb40e0398d40ac86af95866985e7a
+      internalID: -252704923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Snow Blossom_10
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 649.6667
+        width: 162.25
+        height: 162.33333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e6fe6e01890d4134a9431ce7dac55c4
+      internalID: 644592431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Snow Blossom_11
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 649.6667
+        width: 162.25
+        height: 162.33333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73d73cacf281b4e91aff15ac888f8271
+      internalID: -113410503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Snow Blossom_12
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 649.6667
+        width: 162.25
+        height: 162.33333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 785458653c18e4134829ae0cc6523995
+      internalID: 473229408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Snow Blossom_13
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 649.6667
+        width: 162.25
+        height: 162.33333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 692965eb995f24fe28e00feb9095657d
+      internalID: -487210996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Snow Blossom_14
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 649.6667
+        width: 162.25
+        height: 162.33333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b146771789b9484eb475acaa78adb83
+      internalID: -1476903962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Snow Blossom_15
+      rect:
+        serializedVersion: 2
+        x: 1134
+        y: 649.6667
+        width: 162.25
+        height: 162.33333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e99cd88314d094edaaa5049df8d88b13
+      internalID: -1750620942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Snow Blossom_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 487.6667
+        width: 162.25
+        height: 162.33333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1283643f177da415ea55d1cf4ea61d27
+      internalID: 1031982334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Snow Blossom_17
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 487.6667
+        width: 162.25
+        height: 162.33333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56b90a444e02b48f19e7a48e47df8a82
+      internalID: -860799452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Snow Blossom_18
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 487.6667
+        width: 162.25
+        height: 162.33333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d55a4f961a3a5451f9934d377a4315b0
+      internalID: -1722495780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Snow Blossom_19
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 487.6667
+        width: 162.25
+        height: 162.33333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8d9f375ad43c439ba556b273a27d157
+      internalID: 531943746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Snow Blossom_20
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 487.6667
+        width: 162.25
+        height: 162.33333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 073de2365b6b540fbb0108a909adb3e0
+      internalID: 956641442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Snow Blossom_21
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 487.6667
+        width: 162.25
+        height: 162.33333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af12ede5a0fda438f8d8610591bfc0c4
+      internalID: -633156238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Snow Blossom_22
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 487.6667
+        width: 162.25
+        height: 162.33333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3edf4c553f2c43a9892bb4bd0f6023b
+      internalID: 1618275906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Snow Blossom_23
+      rect:
+        serializedVersion: 2
+        x: 1134
+        y: 487.6667
+        width: 162.25
+        height: 162.33333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: add97114e3b7f43ba8639c0b3a4421a7
+      internalID: 274624669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Snow Blossom_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 325.6667
+        width: 162.25
+        height: 162.33333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fa11f74d4f9b4b768b0298aebb72918
+      internalID: 16451016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Snow Blossom_25
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 325.6667
+        width: 162.25
+        height: 162.33333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8754be5eb93974aaeb5f2d0377e3ee92
+      internalID: 1261626674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Snow Blossom_26
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 325.6667
+        width: 162.25
+        height: 162.33333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27d5fa6fb059647fba5c6ed59535edfd
+      internalID: -616088073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Snow Blossom_27
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 325.6667
+        width: 162.25
+        height: 162.33333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69e983e6849d848a6a5085683648068b
+      internalID: -829999749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Snow Blossom_28
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 325.6667
+        width: 162.25
+        height: 162.33333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6ba858c315fc4e78beb59f2065cba53
+      internalID: -1933810875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Snow Blossom_29
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 325.6667
+        width: 162.25
+        height: 162.33333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdb34b75a188940b289a1f8975edb6b5
+      internalID: 2135113008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Snow Blossom_30
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 325.6667
+        width: 162.25
+        height: 162.33333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e850b3d6619a4e109432a2ef372518a
+      internalID: 1841028198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Snow Blossom_31
+      rect:
+        serializedVersion: 2
+        x: 1134
+        y: 325.6667
+        width: 162.25
+        height: 162.33333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54222abed0de349de8684c2a604b114d
+      internalID: 1433408492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Snow Blossom_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 163.66667
+        width: 162.25
+        height: 162.33333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a39d42496a6a41a5bad103682093e28
+      internalID: 1165333477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Snow Blossom_33
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 163.66667
+        width: 162.25
+        height: 162.33333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fc6ef6318822462a8846a8491a42216
+      internalID: 61315569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Snow Blossom_34
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 163.66667
+        width: 162.25
+        height: 162.33333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c89188d245e541e0ba61b5c3515a028
+      internalID: -672579156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Snow Blossom_35
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 163.66667
+        width: 162.25
+        height: 162.33333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d393f556c9f34af0a2c3774fc042e00
+      internalID: -759851466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Snow Blossom_36
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 163.66667
+        width: 162.25
+        height: 162.33333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01ee21e44090640b088fdacac1c8f937
+      internalID: 455435368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Snow Blossom_37
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 163.66667
+        width: 162.25
+        height: 162.33333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6633328178024371b5a543df2ed33cf
+      internalID: -319277340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Snow Blossom_38
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 163.66667
+        width: 162.25
+        height: 162.33333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 103dea05884104ce5a5223ac05ac09cb
+      internalID: 2024866628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Snow Blossom_39
+      rect:
+        serializedVersion: 2
+        x: 1134
+        y: 163.66667
+        width: 162.25
+        height: 162.33333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f50a845f7c2b4054a79e93055efb814
+      internalID: -559331605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Snow Blossom_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1.6666718
+        width: 162.25
+        height: 162.33333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40b7a242f0b5241758361f47b1ec2a3d
+      internalID: -1075293271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Snow Blossom_41
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 1.6666718
+        width: 162.25
+        height: 162.33333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20b5d4a4d46dc43c69c5185b4a9296b0
+      internalID: -750070147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Snow Blossom_42
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 1.6666718
+        width: 162.25
+        height: 162.33333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45ddba3d0160c42ddaa70076ca07eba4
+      internalID: -1342527751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Snow Blossom_43
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 1.6666718
+        width: 162.25
+        height: 162.33333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 205bef956c3874d3a83e7ee93cc84086
+      internalID: 1217422509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Snow Blossom_44
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 1.6666718
+        width: 162.25
+        height: 162.33333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 737de2fdfab3448118a4ca46464bb87a
+      internalID: -1409304843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Snow Blossom_45
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 1.6666718
+        width: 162.25
+        height: 162.33333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 702797f57460741f4acc562f6da0709b
+      internalID: -127971202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Snow Blossom_46
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 1.6666718
+        width: 162.25
+        height: 162.33333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba0bb39571e5443e39ba71ebeeac0b56
+      internalID: 413461665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Snow Blossom_47
+      rect:
+        serializedVersion: 2
+        x: 1134
+        y: 1.6666718
+        width: 162.25
+        height: 162.33333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1731d55228385492286b52c64ac7c5a1
+      internalID: 1120090585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Mobile - Cookie Run - Snow Blossom_0: 830011260
+      Mobile - Cookie Run - Snow Blossom_1: -934621305
+      Mobile - Cookie Run - Snow Blossom_10: 644592431
+      Mobile - Cookie Run - Snow Blossom_11: -113410503
+      Mobile - Cookie Run - Snow Blossom_12: 473229408
+      Mobile - Cookie Run - Snow Blossom_13: -487210996
+      Mobile - Cookie Run - Snow Blossom_14: -1476903962
+      Mobile - Cookie Run - Snow Blossom_15: -1750620942
+      Mobile - Cookie Run - Snow Blossom_16: 1031982334
+      Mobile - Cookie Run - Snow Blossom_17: -860799452
+      Mobile - Cookie Run - Snow Blossom_18: -1722495780
+      Mobile - Cookie Run - Snow Blossom_19: 531943746
+      Mobile - Cookie Run - Snow Blossom_2: 73520980
+      Mobile - Cookie Run - Snow Blossom_20: 956641442
+      Mobile - Cookie Run - Snow Blossom_21: -633156238
+      Mobile - Cookie Run - Snow Blossom_22: 1618275906
+      Mobile - Cookie Run - Snow Blossom_23: 274624669
+      Mobile - Cookie Run - Snow Blossom_24: 16451016
+      Mobile - Cookie Run - Snow Blossom_25: 1261626674
+      Mobile - Cookie Run - Snow Blossom_26: -616088073
+      Mobile - Cookie Run - Snow Blossom_27: -829999749
+      Mobile - Cookie Run - Snow Blossom_28: -1933810875
+      Mobile - Cookie Run - Snow Blossom_29: 2135113008
+      Mobile - Cookie Run - Snow Blossom_3: -652375553
+      Mobile - Cookie Run - Snow Blossom_30: 1841028198
+      Mobile - Cookie Run - Snow Blossom_31: 1433408492
+      Mobile - Cookie Run - Snow Blossom_32: 1165333477
+      Mobile - Cookie Run - Snow Blossom_33: 61315569
+      Mobile - Cookie Run - Snow Blossom_34: -672579156
+      Mobile - Cookie Run - Snow Blossom_35: -759851466
+      Mobile - Cookie Run - Snow Blossom_36: 455435368
+      Mobile - Cookie Run - Snow Blossom_37: -319277340
+      Mobile - Cookie Run - Snow Blossom_38: 2024866628
+      Mobile - Cookie Run - Snow Blossom_39: -559331605
+      Mobile - Cookie Run - Snow Blossom_4: -1510272644
+      Mobile - Cookie Run - Snow Blossom_40: -1075293271
+      Mobile - Cookie Run - Snow Blossom_41: -750070147
+      Mobile - Cookie Run - Snow Blossom_42: -1342527751
+      Mobile - Cookie Run - Snow Blossom_43: 1217422509
+      Mobile - Cookie Run - Snow Blossom_44: -1409304843
+      Mobile - Cookie Run - Snow Blossom_45: -127971202
+      Mobile - Cookie Run - Snow Blossom_46: 413461665
+      Mobile - Cookie Run - Snow Blossom_47: 1120090585
+      Mobile - Cookie Run - Snow Blossom_5: -1049986667
+      Mobile - Cookie Run - Snow Blossom_6: -799380745
+      Mobile - Cookie Run - Snow Blossom_7: 42679765
+      Mobile - Cookie Run - Snow Blossom_8: 1874588973
+      Mobile - Cookie Run - Snow Blossom_9: -252704923
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
