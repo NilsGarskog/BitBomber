@@ -73,7 +73,7 @@ public class Mover : MonoBehaviour
     }
 
     private void FixedUpdate()
-    {
+    {   
         Vector2 position = rigidbody.position;
         Vector2 translation = moveDirection * moveSpeed * Time.fixedDeltaTime;
 
@@ -93,6 +93,31 @@ public class Mover : MonoBehaviour
         activeSpriteRenderer.idle = newDirection == Vector2.zero;
     }
 
+    public Vector2 GetFacingDirection()
+    {
+        if (activeSpriteRenderer == spriteRendererUp)
+        {
+            return Vector2.up;
+        }
+        else if (activeSpriteRenderer == spriteRendererDown)
+        {
+            return Vector2.down;
+        }
+        else if (activeSpriteRenderer == spriteRendererLeft)
+        {
+            return Vector2.left;
+        }
+        else if (activeSpriteRenderer == spriteRendererRight)
+        {
+            return Vector2.right;
+        }
+        else
+        {
+            return Vector2.down;
+        }
+    }
+
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("Explosion"))
@@ -105,6 +130,7 @@ public class Mover : MonoBehaviour
     {
         enabled = false;
         GetComponent<BombController>().enabled = false;
+        GetComponent<EnergyBallController>().enabled = false;
 
         spriteRendererDown.enabled = false;
         spriteRendererUp.enabled = false;
