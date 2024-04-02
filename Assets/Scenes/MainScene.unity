@@ -1955,6 +1955,7 @@ GameObject:
   - component: {fileID: 741737183}
   - component: {fileID: 741737182}
   - component: {fileID: 741737181}
+  - component: {fileID: 741737186}
   m_Layer: 3
   m_Name: Player 4
   m_TagString: Player
@@ -2088,6 +2089,23 @@ Transform:
   - {fileID: 746890514}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &741737186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 741737180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83cb8e75076ed4bdc87551ef147a42f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arrowPrefab: {fileID: 8074300563558467349, guid: 9a65242dae76b436794dff6c856a2ca5, type: 3}
+  arrowSpeed: 15
+  arrowAmount: 1
+  arrowsRemaining: 0
+  playerIndex: 3
 --- !u!1 &746890511
 GameObject:
   m_ObjectHideFlags: 0
@@ -2421,6 +2439,7 @@ GameObject:
   - component: {fileID: 1072776751}
   - component: {fileID: 1072776750}
   - component: {fileID: 1072776755}
+  - component: {fileID: 1072776756}
   m_Layer: 3
   m_Name: Player 2
   m_TagString: Player
@@ -2553,6 +2572,23 @@ MonoBehaviour:
   explosionRadius: 1
   destructibleTiles: {fileID: 583234211}
   destructiblePrefab: {fileID: -2315999527288832478, guid: d2ca7b90bff45451fae4401935cf1439, type: 3}
+  playerIndex: 1
+--- !u!114 &1072776756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1072776748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83cb8e75076ed4bdc87551ef147a42f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arrowPrefab: {fileID: 8074300563558467349, guid: 9a65242dae76b436794dff6c856a2ca5, type: 3}
+  arrowSpeed: 15
+  arrowAmount: 1
+  arrowsRemaining: 0
   playerIndex: 1
 --- !u!1 &1074790596
 GameObject:
@@ -2715,7 +2751,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   arrowPrefab: {fileID: 8074300563558467349, guid: 9a65242dae76b436794dff6c856a2ca5, type: 3}
   arrowSpeed: 15
-  arrowAmount: 10
+  arrowAmount: 5
+  arrowsRemaining: 0
   playerIndex: 0
 --- !u!1 &1137203063
 GameObject:
@@ -5782,6 +5819,7 @@ GameObject:
   - component: {fileID: 1874126764}
   - component: {fileID: 1874126763}
   - component: {fileID: 1874126762}
+  - component: {fileID: 1874126767}
   m_Layer: 3
   m_Name: Player 3
   m_TagString: Player
@@ -5915,6 +5953,23 @@ Transform:
   - {fileID: 2008425457}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1874126767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1874126761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83cb8e75076ed4bdc87551ef147a42f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arrowPrefab: {fileID: 8074300563558467349, guid: 9a65242dae76b436794dff6c856a2ca5, type: 3}
+  arrowSpeed: 15
+  arrowAmount: 1
+  arrowsRemaining: 0
+  playerIndex: 2
 --- !u!1 &1972642216
 GameObject:
   m_ObjectHideFlags: 0
