@@ -5,7 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class HomingSkull : MonoBehaviour
 {
-    public Transform target; 
+    public Transform target;
 
     public float skullSpeed = 5f;
     public float rotateSpeed = 200f;
@@ -13,55 +13,79 @@ public class HomingSkull : MonoBehaviour
     public GameObject chewingEffect;
 
     private Rigidbody2D rb;
-    
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
 
         // Find all players in the scene
         GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
-        Transform furthestPlayer = null;
-        float maxDistance = 0; // Keep track of the furthest distance found
+        Transform closestPlayer = null;
+        Transform secondClosestPlayer = null;
+        float closestDistance = float.MaxValue;
+        float secondClosestDistance = float.MaxValue;
 
         foreach (GameObject player in players)
         {
-            // Calculate the distance from the missile to the current player
             float distance = Vector3.Distance(transform.position, player.transform.position);
 
-            // If this player is further away than the current maxDistance, update furthestPlayer and maxDistance
-            if (distance > maxDistance)
+            if (distance < closestDistance)
             {
-                furthestPlayer = player.transform;
-                maxDistance = distance;
+                // Update the second closest before updating the closest
+                secondClosestPlayer = closestPlayer;
+                secondClosestDistance = closestDistance;
+
+                // Update the closest
+                closestPlayer = player.transform;
+                closestDistance = distance;
+            }
+            else if (distance < secondClosestDistance)
+            {
+                // Update the second closest
+                secondClosestPlayer = player.transform;
+                secondClosestDistance = distance;
             }
         }
 
-        // Assign the furthest player as the target
-        target = furthestPlayer;
+        // Assign the second closest player as the target
+        target = secondClosestPlayer;
 
         if (target == null)
         {
-            Debug.LogWarning("HomingSkull: No player found.");
+            Debug.LogWarning("HomingSkull: No second player found. Defaulting to closest player.");
+            target = closestPlayer; // Fallback to the closest player if there's only one player
         }
     }
 
-
-    // Update is called once per frame
     void FixedUpdate()
     {
-        Vector2 skullDirection = (Vector2)target.position-rb.position;
+        if (target != null)
+        {
+            Vector2 directionToTarget = (Vector2)target.position - rb.position;
 
-        skullDirection.Normalize();
-        float rotateAmount = Vector3.Cross(skullDirection, transform.up).z;
+            directionToTarget.Normalize();
+            float rotateAmount = Vector3.Cross(directionToTarget, transform.up).z;
 
-        rb.angularVelocity = -rotateAmount * rotateSpeed;
-        rb.velocity = transform.up * skullSpeed;
+            rb.angularVelocity = -rotateAmount * rotateSpeed;
+            rb.velocity = transform.up * skullSpeed;
+        }
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        Destroy(gameObject); // Destroy the missile
-        Instantiate(chewingEffect, transform.position, transform.rotation);
+        if (other.gameObject.CompareTag("Player")) // Ensure it's the target object
+        {
+            // Calculate the midpoint for the effect's instantiation
+            Vector3 effectPosition = (transform.position + other.transform.position) / 2;
+            
+            // Instantiate the chewingEffect at the midpoint
+            GameObject effect = Instantiate(chewingEffect, effectPosition, Quaternion.identity);
+
+            // Destroy the effect after 1 second
+            Destroy(effect, 1f); // 1f represents the delay in seconds before the GameObject is destroyed.
+            
+            // Destroy the skull
+            Destroy(gameObject);
+        }
     }
-    
 }

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8299757823909420212}
   - component: {fileID: 7500194841988237399}
   - component: {fileID: 5875008856078786347}
+  - component: {fileID: -649748669397741578}
   m_Layer: 10
   m_Name: HauntedSkull
   m_TagString: Untagged
@@ -30,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.5, y: 2.5, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -103,7 +104,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: -7103166972860294503, guid: 0401eef0f23044745b70e5e2ee4d96e5, type: 3}
+  m_Sprite: {fileID: 1509463787, guid: b5c7915955338b14abe2fe90dc5871e9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -129,7 +130,7 @@ MonoBehaviour:
   target: {fileID: 0}
   skullSpeed: 5
   rotateSpeed: 200
-  chewingEffect: {fileID: 0}
+  chewingEffect: {fileID: 3472380982507555808, guid: 969f5d2e7663be64d86c5e0f62cb15e2, type: 3}
 --- !u!58 &5875008856078786347
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -162,6 +163,28 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.315}
+  m_Offset: {x: -0.1, y: 0.2}
   serializedVersion: 2
-  m_Radius: 0.06
+  m_Radius: 0.4
+--- !u!114 &-649748669397741578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5779939424601068660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e1db8d594bcb4e659a856495b22deec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationSprites:
+  - {fileID: 1509463787, guid: b5c7915955338b14abe2fe90dc5871e9, type: 3}
+  - {fileID: 740281448, guid: b5c7915955338b14abe2fe90dc5871e9, type: 3}
+  - {fileID: 805151855, guid: b5c7915955338b14abe2fe90dc5871e9, type: 3}
+  - {fileID: -1431038331, guid: b5c7915955338b14abe2fe90dc5871e9, type: 3}
+  - {fileID: -692278420, guid: b5c7915955338b14abe2fe90dc5871e9, type: 3}
+  idleSprite: {fileID: 0}
+  animationTime: 0.1666667
+  loop: 1
+  idle: 0

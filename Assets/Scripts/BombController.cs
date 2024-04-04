@@ -2,9 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using UnityEngine.Audio;
 
 public class BombController : MonoBehaviour
 {
+    public AudioClip explosionSound;
+
     [Header("Bomb")]
     public GameObject bombPrefab;
     public float bombFuseTime = 3f;
@@ -59,6 +62,12 @@ public class BombController : MonoBehaviour
 
         Explosion explosion = Instantiate(explosionPrefab, position, Quaternion.identity);
         explosion.SetActiveRenderer(explosion.start);
+
+        if (explosionSound != null)
+        {
+            AudioSource.PlayClipAtPoint(explosionSound, position);
+        }
+        
         Destroy(explosion.gameObject, explosionDuration);
 
         Explode(position, Vector2.up, explosionRadius);
