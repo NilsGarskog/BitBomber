@@ -16,6 +16,7 @@ public class BowController : MonoBehaviour
     public float arrowSpeed = 15f;
     public int arrowAmount = 1;
     public int arrowsRemaining;
+    public int arrowDelay = 0;
 
     [SerializeField]
     private int playerIndex = 0;
@@ -42,6 +43,7 @@ public class BowController : MonoBehaviour
 
     private IEnumerator ShootArrow()
     {
+        yield return new WaitForSeconds(1f); // Wait for one second
         Vector2 position = transform.position;
 
         position.x = Mathf.Round(position.x);
