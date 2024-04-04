@@ -22,12 +22,16 @@ public class Mover : MonoBehaviour
     public AnimatedSpriteRenderer spriteRendererRight;
     public AnimatedSpriteRenderer spriteRendererDeath;
     private AnimatedSpriteRenderer activeSpriteRenderer;
+    
 
 
     private void Awake()
     {
+        
         rigidbody = GetComponent<Rigidbody2D>();
         activeSpriteRenderer = spriteRendererDown;
+        
+
     }
 
     public int GetPlayerIndex()
@@ -93,14 +97,30 @@ public class Mover : MonoBehaviour
         activeSpriteRenderer.idle = newDirection == Vector2.zero;
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+   private void OnTriggerEnter2D(Collider2D other)
+{
+    if (other.gameObject.layer == LayerMask.NameToLayer("Explosion"))
     {
-        if (other.gameObject.layer == LayerMask.NameToLayer("Explosion"))
+        Player player = GetComponent<Player>();
+        
+        if (player != null)
+
         {
-            DeathSequence();
+            if (player.currentHealth <= 0)
+            {
+                DeathSequence();
+            }
+            else
+            {
+                player.TakeDamage(20);
+                if (player.currentHealth <= 0)
+                {
+                    DeathSequence();
+            }
+            }
         }
     }
-
+}
     private void DeathSequence()
     {
         enabled = false;
