@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class ItemPickup : MonoBehaviour
 {
-    private float shieldTime = 7f;
+    private float baseShieldTime = 7f;
+    private float currentShieldTime = 0f;
     public enum ItemType
     {
         Extrabomb,
@@ -14,12 +15,23 @@ public class ItemPickup : MonoBehaviour
     }
     private int coldShieldOrderInLayer = 6;
     public ItemType Type;
-
-    private IEnumerator ActivateShield(GameObject player)
+    private Coroutine shieldCoroutine;
+    private void ActivateShield(GameObject player)
     {
-       player.GetComponent<Mover>().isShielded = true;
-       yield return new WaitForSeconds(shieldTime);
-       player.GetComponent<Mover>().isShielded = false;
+        if(shieldCoroutine != null)
+        {
+            StopCoroutine(shieldCoroutine);
+        }
+        currentShieldTime += baseShieldTime;
+        shieldCoroutine = StartCoroutine(ShieldCountdown(player));
+    }
+
+    private IEnumerator ShieldCountdown(GameObject player)
+    {
+        player.GetComponent<Mover>().isShielded = true;
+        yield return new WaitForSeconds(currentShieldTime);
+        player.GetComponent<Mover>().isShielded = false;
+        currentShieldTime = 0f;
     }
     private void onItemPickup(GameObject player)
     {
@@ -41,7 +53,9 @@ public class ItemPickup : MonoBehaviour
                 break;
 
             case ItemType.ColdShield:
-                StartCoroutine(ActivateShield(player));
+                if(player.GetComponent<Mover>().isShielded == false)
+                {
+                ActivateShield(player);
                 StartCoroutine(DestroyAfterDelay(gameObject));
                 Transform playerTransform = player.transform;
                 transform.SetParent(playerTransform);
@@ -49,6 +63,7 @@ public class ItemPickup : MonoBehaviour
                 if(itemRenderer != null)
                 {
                     itemRenderer.sortingOrder = coldShieldOrderInLayer;
+                }
                 }
                 break;
         }
@@ -64,7 +79,7 @@ public class ItemPickup : MonoBehaviour
 
     private IEnumerator DestroyAfterDelay(GameObject obj)
     {
-        yield return new WaitForSeconds(shieldTime);
+        yield return new WaitForSeconds(currentShieldTime);
         Destroy(obj);
     }
     private void OnTriggerEnter2D(Collider2D other)
