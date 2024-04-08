@@ -80,9 +80,10 @@ public class BombController : MonoBehaviour
 
         position += direction;
 
-
+        
         if (Physics2D.OverlapBox(position, Vector2.one / 2f, 0f, explosionLayerMask))
         {
+            Debug.Log("Hit something at " + position);
             ClearDestructible(position);
             return;
         }
