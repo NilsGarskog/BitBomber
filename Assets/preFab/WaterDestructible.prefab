@@ -153,7 +153,7 @@ MonoBehaviour:
   - {fileID: 369879427, guid: d496f96c419a243fa968621198b8e275, type: 3}
   - {fileID: -607992407, guid: d496f96c419a243fa968621198b8e275, type: 3}
   idleSprite: {fileID: -665511179, guid: d496f96c419a243fa968621198b8e275, type: 3}
-  animationTime: 0.1666667
+  animationTime: 0.1428571
   loop: 0
   idle: 0
 --- !u!114 &1276632282573318008
@@ -169,5 +169,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destructionTime: 1
-  itemSpawnChance: 0.49
-  spawnableItems: []
+  itemSpawnChance: 0.8
+  spawnableItems:
+  - {fileID: 5615691351215187987, guid: abbf768803a684c9393b2751b32f1793, type: 3}
+  - {fileID: 6269460091253412277, guid: 0865721aaf91d42679fe20b1389fa7a8, type: 3}
+  - {fileID: 8052666871433075062, guid: f14fe6248dc484eea88641b1824063fa, type: 3}
+  - {fileID: 921456313455362693, guid: 95a9006aba6e34ed7ab219a3e591fa72, type: 3}
