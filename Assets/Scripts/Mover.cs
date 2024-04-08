@@ -62,14 +62,6 @@ public class Mover : MonoBehaviour
         {
             SetDirection(Vector2.zero, activeSpriteRenderer);
         }
-
-        /*
-        moveDirection = new Vector2(inputVector.x, inputVector.y);
-        moveDirection = transform.TransformDirection(moveDirection);
-        moveDirection *= moveSpeed;
-
-        controller.Move(moveDirection * Time.deltaTime);
-        */
     }
 
     private void FixedUpdate()
