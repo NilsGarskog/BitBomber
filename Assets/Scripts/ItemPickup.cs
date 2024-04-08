@@ -10,6 +10,7 @@ public class ItemPickup : MonoBehaviour
         BlastRadius,
         SpeedIncrease,
         ExtraArrow,
+        EnergyBall,
     }
 
     public ItemType Type;
@@ -31,6 +32,9 @@ public class ItemPickup : MonoBehaviour
                 break;
             case ItemType.ExtraArrow:
                 player.GetComponent<BowController>().arrowsRemaining += 1;
+                break;
+            case ItemType.EnergyBall:
+                player.GetComponent<EnergyBallController>().AddEnergyBall();
                 break;
         }
         Destroy(gameObject);
