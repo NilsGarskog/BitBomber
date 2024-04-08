@@ -21,6 +21,10 @@ public class Arrow : MonoBehaviour
                 Destroy(gameObject);
             }
         }
+        else if (other.gameObject.layer == LayerMask.NameToLayer("bomb") || other.gameObject.layer == LayerMask.NameToLayer("Item"))
+        {
+            //do nothing
+        }
         else
         {
             Destroy(gameObject);

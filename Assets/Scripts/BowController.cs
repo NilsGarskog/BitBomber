@@ -10,12 +10,13 @@ public class BowController : MonoBehaviour
 
     private AnimatedSpriteRenderer activeSpriteRenderer;
     private Mover mover;
+    public ArrowBar arrowBar;
+    private bool arrowLoading = false;
 
     [Header("Bow")]
     public GameObject arrowPrefab;
     public float arrowSpeed = 15f;
-    public int arrowAmount = 1;
-    public int arrowsRemaining;
+    public int arrowsRemaining = 0;
     public int arrowDelay = 0;
 
     [SerializeField]
@@ -28,14 +29,13 @@ public class BowController : MonoBehaviour
 
     private void Awake()
     {
-        arrowsRemaining = arrowAmount;
         mover = GetComponent<Mover>();
 
     }
 
     public void SetArrowShot()
     {
-        if (arrowsRemaining > 0)
+        if (arrowsRemaining > 0 && arrowLoading == false)
         {
             StartCoroutine(ShootArrow());
         }
@@ -43,8 +43,12 @@ public class BowController : MonoBehaviour
 
     private IEnumerator ShootArrow()
     {
+        arrowLoading = true;
+        arrowBar.gameObject.SetActive(true);
+        arrowBar.WindUp();
         arrowPrefab.GetComponent<Arrow>().shooterIndex = playerIndex;
         yield return new WaitForSeconds(1f); // Wait for one second
+        arrowBar.gameObject.SetActive(false);
         Vector2 position = transform.position;
 
         position.x = Mathf.Round(position.x);
@@ -61,10 +65,9 @@ public class BowController : MonoBehaviour
         GameObject arrow = Instantiate(arrowPrefab, position, rotation);
         arrowsRemaining--;
 
-        yield return new WaitForSeconds(0.1f);
-
         Rigidbody2D rb = arrow.GetComponent<Rigidbody2D>();
         rb.velocity = direction * arrowSpeed;
+        arrowLoading = false;
     }
 
     private Vector2 findDirection()
