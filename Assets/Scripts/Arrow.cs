@@ -6,6 +6,7 @@ using UnityEngine;
 public class Arrow : MonoBehaviour
 {
     Rigidbody2D rb = null;
+    public int shooterIndex = 0;
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -13,6 +14,16 @@ public class Arrow : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Destroy(gameObject);
+        if (other.gameObject.CompareTag("Player"))
+        {
+            if (other.gameObject.GetComponent<Mover>().GetPlayerIndex() != shooterIndex)
+            {
+                Destroy(gameObject);
+            }
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 }

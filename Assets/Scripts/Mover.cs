@@ -99,7 +99,7 @@ public class Mover : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.layer == LayerMask.NameToLayer("Explosion"))
+        if (other.gameObject.layer == LayerMask.NameToLayer("Explosion") || other.gameObject.layer == LayerMask.NameToLayer("Arrow"))
         {
             Player player = GetComponent<Player>();
 
@@ -112,7 +112,21 @@ public class Mover : MonoBehaviour
                 }
                 else
                 {
-                    player.TakeDamage(20);
+                    if (other.gameObject.layer == LayerMask.NameToLayer("Arrow"))
+                    {
+                        if (other.gameObject.GetComponent<Arrow>().shooterIndex != playerIndex)
+                        {
+                            player.TakeDamage(50);
+                        }
+                        else
+                        {
+                            player.TakeDamage(0);
+                        }
+                    }
+                    else
+                    {
+                        player.TakeDamage(20);
+                    }
                     if (player.currentHealth <= 0)
                     {
                         DeathSequence();

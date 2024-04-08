@@ -43,6 +43,7 @@ public class BowController : MonoBehaviour
 
     private IEnumerator ShootArrow()
     {
+        arrowPrefab.GetComponent<Arrow>().shooterIndex = playerIndex;
         yield return new WaitForSeconds(1f); // Wait for one second
         Vector2 position = transform.position;
 
