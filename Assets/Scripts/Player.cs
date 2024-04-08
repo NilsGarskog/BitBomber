@@ -20,4 +20,14 @@ public HealthBar healthBar;
         currentHealth -= damage;
         healthBar.SetHealth(currentHealth);
     }
+
+    public void Heal(int heal)
+    {
+        currentHealth += heal;
+        healthBar.SetHealth(currentHealth);
+        if (currentHealth > maxHealth)
+        {
+            currentHealth = maxHealth;
+        }
+    }
 }
