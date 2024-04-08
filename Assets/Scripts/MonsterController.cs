@@ -2,35 +2,38 @@ using UnityEngine;
 
 public class MonsterController : MonoBehaviour
 {
-    public float baseMoveSpeed = 2.5f; // Base speed of the monster's movement
-    public float detectionRange = 5f; // Distance at which the monster detects the player
-    public float reverseDuration = 2f; // Duration to reverse velocity after colliding with the player
+    public float baseMoveSpeed = 2.5f; // Default movement speed for NPC
+    public float detectedMoveSpeed = 5f;
+    public float detectionRange = 5f; // Units in a circle around the NPC where it detects players
+    public float reverseDuration = 2f;  // Reset time where the NPC reverse its velocity 
+                                        // after colliding with a player
+    public float obstacleDetectionRange = 1f; // Distance to check for obstacles ahead
 
-    private GameObject[] players; // Array of all players in the scene
-    private Transform target; // Current target the monster is following
-    private Vector2 randomTarget; // Random target position for the monster to move towards
-    private bool isFollowingPlayer = false; // Flag to indicate if the monster is following the player
-    private bool isReversing = false; // Flag to indicate if the monster is currently reversing velocity
-    private Vector2 originalDirection; // Original direction before reversing velocity
-    private float reverseTimer = 0f; // Timer for reversing velocity
+    public float minX = -6f; // Tile map axis boundaries, update if tile map size is changed 
+    public float maxX = 6f;  // from default
+    public float minY = -5f;
+    public float maxY = 5f;
 
-    private float currentMoveSpeed; // Current speed of the monster's movement
+    private GameObject[] players;
+    private Transform target;
+    private Vector2 randomTarget;
+    private bool isFollowingPlayer = false;
+    private bool isReversing = false;
+    private Vector2 originalDirection;
+    private float reverseTimer = 0f;
+
+    private float currentMoveSpeed;
 
     void Start()
     {
-        // Find all players in the scene
         players = GameObject.FindGameObjectsWithTag("Player");
-
-        // Set an initial random target position for the monster to move towards
-        randomTarget = GetRandomPosition();
-
-        // Set the initial move speed
+        randomTarget = GetRandomPositionWithinBounds();
         currentMoveSpeed = baseMoveSpeed;
     }
 
-    void Update()
+    void Update() // Updates distances to players and calls for moving 
+                  // towards player and avoid getting stuck
     {
-        // Find the closest player within detection range
         float closestDistance = float.MaxValue;
         foreach (GameObject player in players)
         {
@@ -42,7 +45,6 @@ public class MonsterController : MonoBehaviour
             }
         }
 
-        // Check if the player is within detection range and select it as the target
         if (target != null && closestDistance <= detectionRange)
         {
             isFollowingPlayer = true;
@@ -50,38 +52,32 @@ public class MonsterController : MonoBehaviour
         else
         {
             isFollowingPlayer = false;
-            // If the monster is not following the player, move towards a random target
+            // Additional logic to prevent getting stuck
+            AvoidGettingStuck();
             MoveTowards(randomTarget);
         }
 
-        // If the monster is following the player, move towards the player
         if (isFollowingPlayer && !isReversing)
         {
-            // Increase speed exponentially up to 200% extra velocity
-            currentMoveSpeed = Mathf.Lerp(currentMoveSpeed, baseMoveSpeed * 2f, Time.deltaTime);
+            currentMoveSpeed = Mathf.Lerp(currentMoveSpeed, detectedMoveSpeed, Time.deltaTime);
             MoveTowards(target.position);
         }
         else
         {
-            // Reset speed to the base speed when not following a player
             currentMoveSpeed = baseMoveSpeed;
         }
 
-        // Reverse velocity when colliding with the player
         if (isReversing)
         {
             reverseTimer += Time.deltaTime;
             if (reverseTimer >= reverseDuration)
             {
-                // Stop reversing after the specified duration
                 isReversing = false;
                 reverseTimer = 0f;
-                // Set the closest player as the new target after reversing
                 target = FindClosestPlayer();
             }
-            else
+            else // reverse velocity isReversing is true, i.e. collision with player has happened
             {
-                // Reverse velocity
                 transform.Translate(-originalDirection * currentMoveSpeed * Time.deltaTime);
             }
         }
@@ -89,30 +85,23 @@ public class MonsterController : MonoBehaviour
 
     void MoveTowards(Vector2 targetPosition)
     {
-        // Calculate the direction towards the target position
         Vector2 moveDirection = (targetPosition - (Vector2)transform.position).normalized;
-
-        // Store the original direction before reversing velocity
         originalDirection = moveDirection;
-
-        // Move the monster towards the target position
         transform.Translate(moveDirection * currentMoveSpeed * Time.deltaTime);
 
-        // If the monster is very close to the target position, set a new random target
-        if (Vector2.Distance(transform.position, targetPosition) < 0.1f)
+        if (Vector2.Distance(transform.position, targetPosition) < 0.1f && !isFollowingPlayer)
         {
-            if (!isFollowingPlayer)
-            {
-                randomTarget = GetRandomPosition();
-            }
+            randomTarget = GetRandomPositionWithinBounds();
         }
     }
 
-    Vector2 GetRandomPosition()
+    Vector2 GetRandomPositionWithinBounds()
     {
-        // Generate a random position within a certain range around the monster
-        Vector2 randomPosition = (Vector2)transform.position + new Vector2(Random.Range(-5f, 5f), Random.Range(-5f, 5f));
-        return randomPosition;
+        // Floats based on the size of the tile map, has to be updated if map size
+        // is changed from default size.
+        float randomX = Random.Range(minX, maxX);
+        float randomY = Random.Range(minY, maxY);
+        return new Vector2(randomX, randomY);
     }
 
     Transform FindClosestPlayer()
@@ -133,14 +122,25 @@ public class MonsterController : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        // Check if the collided object is the player
         if (collision.gameObject.CompareTag("Player"))
         {
-            // Debug log statement indicating collision with a player
             Debug.Log("Monster collided with player.");
-
-            // Reverse velocity for the specified duration
             isReversing = true;
+        }
+        else if (collision.gameObject.CompareTag("Wall"))
+        {
+            randomTarget = GetRandomPositionWithinBounds();
+            Debug.Log("Monster collided with wall, changing direction.");
+        }
+    }
+
+    void AvoidGettingStuck()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, originalDirection, obstacleDetectionRange);
+        if (hit.collider != null && hit.collider.CompareTag("Wall"))
+        {
+            // Change direction if an obstacle is directly ahead
+            randomTarget = GetRandomPositionWithinBounds();
         }
     }
 }
