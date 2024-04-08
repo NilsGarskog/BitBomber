@@ -3090,6 +3090,7 @@ GameObject:
   - component: {fileID: 741737181}
   - component: {fileID: 741737186}
   - component: {fileID: 741737187}
+  - component: {fileID: 741737188}
   m_Layer: 3
   m_Name: Player 4
   m_TagString: Player
@@ -3256,6 +3257,23 @@ MonoBehaviour:
   arrowSpeed: 15
   arrowsRemaining: 0
   arrowDelay: 0
+  playerIndex: 3
+--- !u!114 &741737188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 741737180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8e405537cb57a24bb5f95b179bcfe7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  energyBallPrefab: {fileID: 720354553236450077, guid: be7337aa345f76242b8a8317c62257da, type: 3}
+  energyBallAmount: 0
+  energyBallSpeed: 15
+  slowedEffectPrefab: {fileID: 418261390384613547, guid: 958b024aa29059249b7ca2d8a5ddc393, type: 3}
   playerIndex: 3
 --- !u!1 &746890511
 GameObject:
@@ -3920,6 +3938,7 @@ GameObject:
   - component: {fileID: 1072776755}
   - component: {fileID: 1072776756}
   - component: {fileID: 1072776757}
+  - component: {fileID: 1072776758}
   m_Layer: 3
   m_Name: Player 2
   m_TagString: Player
@@ -4087,6 +4106,23 @@ MonoBehaviour:
   arrowsRemaining: 0
   arrowDelay: 0
   playerIndex: 1
+--- !u!114 &1072776758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1072776748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8e405537cb57a24bb5f95b179bcfe7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  energyBallPrefab: {fileID: 720354553236450077, guid: be7337aa345f76242b8a8317c62257da, type: 3}
+  energyBallAmount: 0
+  energyBallSpeed: 15
+  slowedEffectPrefab: {fileID: 418261390384613547, guid: 958b024aa29059249b7ca2d8a5ddc393, type: 3}
+  playerIndex: 1
 --- !u!1 &1074790596
 GameObject:
   m_ObjectHideFlags: 0
@@ -4102,6 +4138,7 @@ GameObject:
   - component: {fileID: 1074790603}
   - component: {fileID: 1074790605}
   - component: {fileID: 1074790606}
+  - component: {fileID: 1074790607}
   m_Layer: 3
   m_Name: Player 1
   m_TagString: Player
@@ -4268,6 +4305,23 @@ MonoBehaviour:
   arrowSpeed: 15
   arrowsRemaining: 0
   arrowDelay: 0
+  playerIndex: 0
+--- !u!114 &1074790607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1074790596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8e405537cb57a24bb5f95b179bcfe7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  energyBallPrefab: {fileID: 720354553236450077, guid: be7337aa345f76242b8a8317c62257da, type: 3}
+  energyBallAmount: 0
+  energyBallSpeed: 15
+  slowedEffectPrefab: {fileID: 418261390384613547, guid: 958b024aa29059249b7ca2d8a5ddc393, type: 3}
   playerIndex: 0
 --- !u!1 &1128410602
 GameObject:
@@ -8341,6 +8395,7 @@ GameObject:
   - component: {fileID: 1874126762}
   - component: {fileID: 1874126767}
   - component: {fileID: 1874126768}
+  - component: {fileID: 1874126769}
   m_Layer: 3
   m_Name: Player 3
   m_TagString: Player
@@ -8507,6 +8562,23 @@ MonoBehaviour:
   arrowSpeed: 15
   arrowsRemaining: 0
   arrowDelay: 0
+  playerIndex: 2
+--- !u!114 &1874126769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1874126761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8e405537cb57a24bb5f95b179bcfe7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  energyBallPrefab: {fileID: 720354553236450077, guid: be7337aa345f76242b8a8317c62257da, type: 3}
+  energyBallAmount: 0
+  energyBallSpeed: 15
+  slowedEffectPrefab: {fileID: 418261390384613547, guid: 958b024aa29059249b7ca2d8a5ddc393, type: 3}
   playerIndex: 2
 --- !u!1 &1929395356
 GameObject:

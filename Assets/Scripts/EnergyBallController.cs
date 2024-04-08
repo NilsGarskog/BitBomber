@@ -8,7 +8,7 @@ public class EnergyBallController : MonoBehaviour
 {
     [Header("EnergyBall")]
     public GameObject energyBallPrefab;
-    public int energyBallAmount = 0;
+    public int energyBallAmount;
     public float energyBallSpeed = 15f;
     public GameObject slowedEffectPrefab;
 
@@ -27,6 +27,7 @@ public class EnergyBallController : MonoBehaviour
 
     private void Awake()
     {
+        energyBallAmount = 0;
         mover = GetComponent<Mover>();
         playerInputHandler = GetComponent<PlayerInputHandler>();
     }

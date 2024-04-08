@@ -30,7 +30,7 @@ public class PlayerInputHandler : MonoBehaviour
         mover = movers.FirstOrDefault(m => m.GetPlayerIndex() == index);
         bombController = bombControllers.FirstOrDefault(b => b.GetPlayerIndex() == index);
         bowController = bowControllers.FirstOrDefault(b => b.GetPlayerIndex() == index);
-        energyBallController = energyBallControllers.FirstOrDefault(e => e.GetPlayerIndex() == index);
+        energyBallController = energyBallControllers.FirstOrDefault(b => b.GetPlayerIndex() == index);
     }
 
     public void OnMove(CallbackContext context)
@@ -58,6 +58,7 @@ public class PlayerInputHandler : MonoBehaviour
     {
         if (context.started)
         {
+            Debug.Log("OnShootEnergyBall");
             energyBallController.SetEnergyBall();
         }
     }
