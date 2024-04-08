@@ -21,16 +21,16 @@ public class Mover : MonoBehaviour
     public AnimatedSpriteRenderer spriteRendererLeft;
     public AnimatedSpriteRenderer spriteRendererRight;
     public AnimatedSpriteRenderer spriteRendererDeath;
-    private AnimatedSpriteRenderer activeSpriteRenderer;
-    
+    public AnimatedSpriteRenderer activeSpriteRenderer;
+
 
 
     private void Awake()
     {
-        
+
         rigidbody = GetComponent<Rigidbody2D>();
         activeSpriteRenderer = spriteRendererDown;
-        
+
 
     }
 
@@ -97,30 +97,44 @@ public class Mover : MonoBehaviour
         activeSpriteRenderer.idle = newDirection == Vector2.zero;
     }
 
-   private void OnTriggerEnter2D(Collider2D other)
-{
-    if (other.gameObject.layer == LayerMask.NameToLayer("Explosion"))
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        Player player = GetComponent<Player>();
-        
-        if (player != null)
-
+        if (other.gameObject.layer == LayerMask.NameToLayer("Explosion") || other.gameObject.layer == LayerMask.NameToLayer("Arrow"))
         {
-            if (player.currentHealth <= 0)
+            Player player = GetComponent<Player>();
+
+            if (player != null)
+
             {
-                DeathSequence();
-            }
-            else
-            {
-                player.TakeDamage(20);
                 if (player.currentHealth <= 0)
                 {
                     DeathSequence();
-            }
+                }
+                else
+                {
+                    if (other.gameObject.layer == LayerMask.NameToLayer("Arrow"))
+                    {
+                        if (other.gameObject.GetComponent<Arrow>().shooterIndex != playerIndex)
+                        {
+                            player.TakeDamage(50);
+                        }
+                        else
+                        {
+                            player.TakeDamage(0);
+                        }
+                    }
+                    else
+                    {
+                        player.TakeDamage(20);
+                    }
+                    if (player.currentHealth <= 0)
+                    {
+                        DeathSequence();
+                    }
+                }
             }
         }
     }
-}
     private void DeathSequence()
     {
         enabled = false;

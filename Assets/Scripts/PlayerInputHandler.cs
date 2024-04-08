@@ -11,6 +11,7 @@ public class PlayerInputHandler : MonoBehaviour
     private PlayerInput playerInput;
     private Mover mover;
     private BombController bombController;
+    private BowController bowController;
 
     private void Awake()
     {
@@ -22,9 +23,11 @@ public class PlayerInputHandler : MonoBehaviour
         */
         var movers = FindObjectsOfType<Mover>();
         var bombControllers = FindObjectsOfType<BombController>();
+        var bowControllers = FindObjectsOfType<BowController>();
         var index = playerInput.playerIndex;
         mover = movers.FirstOrDefault(m => m.GetPlayerIndex() == index);
         bombController = bombControllers.FirstOrDefault(b => b.GetPlayerIndex() == index);
+        bowController = bowControllers.FirstOrDefault(b => b.GetPlayerIndex() == index);
     }
 
     public void OnMove(CallbackContext context)
@@ -37,6 +40,14 @@ public class PlayerInputHandler : MonoBehaviour
         if (context.started)
         {
             bombController.SetBombDrop();
+        }
+    }
+
+    public void OnShootArrow(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            bowController.SetArrowShot();
         }
     }
 }
