@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8fd72c0c7ffe34853b815776e01b44e6
+guid: f17e92900c4eb4f66aba746f6a96cabb
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TrollUp_0
+      name: TrollUp 1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 24
-        height: 32
+        width: 16
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,20 +111,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b1b660b5ea9e34c91b66acfd3f0e2217
-      internalID: -1396851729
+      spriteID: 79806d5f10d8f45528caa5c15c29ec10
+      internalID: -1572027675
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TrollUp_1
+      name: TrollUp 1_1
       rect:
         serializedVersion: 2
-        x: 24
+        x: 16
         y: 0
-        width: 24
-        height: 32
+        width: 16
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,20 +132,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cc4b9174f31544d1b97d803266d59f0d
-      internalID: -1538218742
+      spriteID: fca1a42383e734bcdbf8b88cc7f98178
+      internalID: -1342298
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TrollUp_2
+      name: TrollUp 1_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0747c23fd197940e7be08e9c676e1434
+      internalID: -596279920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrollUp 1_3
       rect:
         serializedVersion: 2
         x: 48
         y: 0
-        width: 24
-        height: 32
+        width: 16
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,29 +174,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aeef80199e87c450a9f6381d644d493f
-      internalID: 966078807
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TrollUp_3
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 0
-        width: 24
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 93d0a75da29d14970ad38268aa845c0d
-      internalID: -1789562387
+      spriteID: 89410529659594b13b5b6aeff2614c71
+      internalID: -687323186
       vertices: []
       indices: 
       edges: []
@@ -191,10 +191,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      TrollUp_0: -1396851729
-      TrollUp_1: -1538218742
-      TrollUp_2: 966078807
-      TrollUp_3: -1789562387
+      TrollUp 1_0: -1572027675
+      TrollUp 1_1: -1342298
+      TrollUp 1_2: -596279920
+      TrollUp 1_3: -687323186
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
