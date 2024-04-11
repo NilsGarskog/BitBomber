@@ -43,28 +43,26 @@ public class ItemPickup : MonoBehaviour
 
              case ItemType.Extrabomb:
                 player.GetComponent<BombController>().AddBomb();
-                Destroy(gameObject);
                 break;
 
             case ItemType.BlastRadius:
                 player.GetComponent<BombController>().explosionRadius += 1;
-                Destroy(gameObject);
                 break;
+
             case ItemType.SpeedIncrease:
                 player.GetComponent<Mover>().moveSpeed += 1;
-                Destroy(gameObject);
                 break;
+
             case ItemType.ExtraArrow:
                 player.GetComponent<BowController>().arrowsRemaining += 1;
-                Destroy(gameObject);
                 break;
+
             case ItemType.EnergyBall:
                 player.GetComponent<EnergyBallController>().AddEnergyBall();
-                Destroy(gameObject);
                 break;
+
             case ItemType.ExtraSkull:
                 player.GetComponent<SkullController>().AddSkull();
-                Destroy(gameObject);
                 break;
 
 
@@ -82,6 +80,10 @@ public class ItemPickup : MonoBehaviour
                 }
                 }
                 break;
+
+                if(ItemType!.ColdShield){
+                    Destroy(gameObject)
+                }
         }
         
     }
