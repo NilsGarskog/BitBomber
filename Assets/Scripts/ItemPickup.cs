@@ -12,9 +12,32 @@ public class ItemPickup : MonoBehaviour
         ExtraArrow,
         EnergyBall,
         ExtraSkull,
+        ColdShield,
     }
 
     public ItemType Type;
+    private float baseShieldTime = 7f;
+    private float currentShieldTime = 0f;
+    private int coldShieldOrderInLayer = 6;
+
+    private Coroutine shieldCoroutine;
+    private void ActivateShield(GameObject player)
+    {
+        if(shieldCoroutine != null)
+        {
+            StopCoroutine(shieldCoroutine);
+        }
+        currentShieldTime += baseShieldTime;
+        shieldCoroutine = StartCoroutine(ShieldCountdown(player));
+    }
+
+    private IEnumerator ShieldCountdown(GameObject player)
+    {
+        player.GetComponent<Mover>().isShielded = true;
+        yield return new WaitForSeconds(currentShieldTime);
+        player.GetComponent<Mover>().isShielded = false;
+        currentShieldTime = 0f;
+    }
 
     private void onItemPickup(GameObject player)
     {
@@ -40,10 +63,38 @@ public class ItemPickup : MonoBehaviour
             case ItemType.ExtraSkull:
                 player.GetComponent<SkullController>().AddSkull();
                 break;
+            case ItemType.ColdShield:
+              if(player.GetComponent<Mover>().isShielded == false)
+                {
+                ActivateShield(player);
+                StartCoroutine(DestroyAfterDelay(gameObject));
+                Transform playerTransform = player.transform;
+                transform.SetParent(playerTransform);
+                SpriteRenderer itemRenderer = GetComponent<SpriteRenderer>();
+                if(itemRenderer != null)
+                {
+                    itemRenderer.sortingOrder = coldShieldOrderInLayer;
+                }
+                }
+
+
 
 
         }
         Destroy(gameObject);
+    }
+     private void Update()
+    {
+        if(Type == ItemType.ColdShield && transform.parent != null)
+        {
+            transform.position = transform.parent.position;
+        }
+    }
+
+    private IEnumerator DestroyAfterDelay(GameObject obj)
+    {
+        yield return new WaitForSeconds(currentShieldTime);
+        Destroy(obj);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
