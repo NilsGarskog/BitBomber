@@ -6,7 +6,6 @@ public class Mover : MonoBehaviour
 {
     [SerializeField]
     public float moveSpeed = 5f;
-    
 
     [SerializeField]
     private int playerIndex = 0;
@@ -124,11 +123,9 @@ public class Mover : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Player player = GetComponent<Player>();
-
-        if ((other.gameObject.layer == LayerMask.NameToLayer("Explosion") || other.gameObject.layer == LayerMask.NameToLayer("Arrow") || other.gameObject.layer == LayerMask.NameToLayer("Skull")) && player.isShielded == false)
+        if (other.gameObject.layer == LayerMask.NameToLayer("Explosion") || other.gameObject.layer == LayerMask.NameToLayer("Arrow") || other.gameObject.layer == LayerMask.NameToLayer("Skull"))
         {
-            
+            Player player = GetComponent<Player>();
 
             if (player != null)
 
