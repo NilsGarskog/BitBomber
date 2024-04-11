@@ -10,6 +10,7 @@ public class UINumberUpdate : MonoBehaviour
     public TextMeshProUGUI bombText;
     public TextMeshProUGUI arrowText;
     public TextMeshProUGUI EnergyText;
+    public TextMeshProUGUI SkullText;
     public Image AliveHeadImage;
     public Image DeadHeadImage;
     public Slider slider;
@@ -20,6 +21,7 @@ public class UINumberUpdate : MonoBehaviour
         bombText.text = ("X" + player.GetComponent<BombController>().bombsRemaining.ToString());
         arrowText.text = ("X" + player.GetComponent<BowController>().arrowsRemaining.ToString());
         EnergyText.text = ("X" + player.GetComponent<EnergyBallController>().energyBallAmount.ToString());
+        SkullText.text = ("X" + player.GetComponent<SkullController>().skullsRemaining.ToString());
         slider.value = player.GetComponent<Player>().currentHealth;
 
         if (player.GetComponent<Player>().currentHealth <= 0)
