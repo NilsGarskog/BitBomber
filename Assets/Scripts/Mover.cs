@@ -123,7 +123,7 @@ public class Mover : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.layer == LayerMask.NameToLayer("Explosion") || other.gameObject.layer == LayerMask.NameToLayer("Arrow"))
+        if (other.gameObject.layer == LayerMask.NameToLayer("Explosion") || other.gameObject.layer == LayerMask.NameToLayer("Arrow") || other.gameObject.layer == LayerMask.NameToLayer("Skull"))
         {
             Player player = GetComponent<Player>();
 
@@ -147,14 +147,22 @@ public class Mover : MonoBehaviour
                             player.TakeDamage(0);
                         }
                     }
-                    else
+                    if (other.gameObject.layer == LayerMask.NameToLayer("Skull"))
+                    {
+                        player.TakeDamage(50);
+                    }
+
+                    if (other.gameObject.layer == LayerMask.NameToLayer("Explosion"))
                     {
                         player.TakeDamage(20);
                     }
+
                     if (player.currentHealth <= 0)
                     {
                         DeathSequence();
                     }
+                    
+
                 }
             }
         }
