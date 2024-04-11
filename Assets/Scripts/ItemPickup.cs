@@ -12,6 +12,7 @@ public class ItemPickup : MonoBehaviour
         ExtraArrow,
         EnergyBall,
         ExtraSkull,
+        ColdShield,
     }
 
     public ItemType Type;
@@ -40,10 +41,17 @@ public class ItemPickup : MonoBehaviour
             case ItemType.ExtraSkull:
                 player.GetComponent<SkullController>().AddSkull();
                 break;
+            case ItemType.ColdShield:
+                player.GetComponent<ShieldController>().ActivateShield(player);
+                break;
 
 
         }
-        Destroy(gameObject);
+      
+            Destroy(gameObject);
+        
+     
+        
     }
 
     private void OnTriggerEnter2D(Collider2D other)
