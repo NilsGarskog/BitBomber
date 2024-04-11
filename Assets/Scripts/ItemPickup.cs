@@ -13,6 +13,7 @@ public class ItemPickup : MonoBehaviour
         EnergyBall,
         ExtraSkull,
         ColdShield,
+        PowerUp,
     }
 
     public ItemType Type;
@@ -43,6 +44,9 @@ public class ItemPickup : MonoBehaviour
                 break;
             case ItemType.ColdShield:
                 player.GetComponent<ShieldController>().ActivateShield(player);
+                break;
+            case ItemType.PowerUp:
+                player.GetComponent<Player>().Heal(20);
                 break;
 
 
