@@ -4,102 +4,56 @@ using UnityEngine;
 
 public class ItemPickup : MonoBehaviour
 {
-    private float baseShieldTime = 7f;
-    private float currentShieldTime = 0f;
     public enum ItemType
     {
         Extrabomb,
         BlastRadius,
         SpeedIncrease,
-        ExtraSkull, 
-        EnergyBall,
         ExtraArrow,
+        EnergyBall,
+        ExtraSkull,
         ColdShield,
     }
-    private int coldShieldOrderInLayer = 6;
-    public ItemType Type;
-    private Coroutine shieldCoroutine;
-    private void ActivateShield(GameObject player)
-    {
-        if(shieldCoroutine != null)
-        {
-            StopCoroutine(shieldCoroutine);
-        }
-        currentShieldTime += baseShieldTime;
-        shieldCoroutine = StartCoroutine(ShieldCountdown(player));
-    }
 
-    private IEnumerator ShieldCountdown(GameObject player)
-    {
-        player.GetComponent<Mover>().isShielded = true;
-        yield return new WaitForSeconds(currentShieldTime);
-        player.GetComponent<Mover>().isShielded = false;
-        currentShieldTime = 0f;
-    }
+    public ItemType Type;
+
     private void onItemPickup(GameObject player)
     {
         switch (Type)
         {
 
-             case ItemType.Extrabomb:
+            case ItemType.Extrabomb:
                 player.GetComponent<BombController>().AddBomb();
                 break;
 
             case ItemType.BlastRadius:
                 player.GetComponent<BombController>().explosionRadius += 1;
                 break;
-
             case ItemType.SpeedIncrease:
                 player.GetComponent<Mover>().moveSpeed += 1;
                 break;
-
             case ItemType.ExtraArrow:
                 player.GetComponent<BowController>().arrowsRemaining += 1;
                 break;
-
             case ItemType.EnergyBall:
                 player.GetComponent<EnergyBallController>().AddEnergyBall();
                 break;
-
             case ItemType.ExtraSkull:
                 player.GetComponent<SkullController>().AddSkull();
                 break;
-
-
             case ItemType.ColdShield:
-                if(player.GetComponent<Mover>().isShielded == false)
-                {
-                ActivateShield(player);
-                StartCoroutine(DestroyAfterDelay(gameObject));
-                Transform playerTransform = player.transform;
-                transform.SetParent(playerTransform);
-                SpriteRenderer itemRenderer = GetComponent<SpriteRenderer>();
-                if(itemRenderer != null)
-                {
-                    itemRenderer.sortingOrder = coldShieldOrderInLayer;
-                }
-                }
+                player.GetComponent<ShieldController>().ActivateShield(player);
                 break;
 
-                if(ItemType!.ColdShield){
-                    Destroy(gameObject)
-                }
+
         }
+      
+            Destroy(gameObject);
+        
+     
         
     }
-    private void Update()
-    {
-        if(Type == ItemType.ColdShield && transform.parent != null)
-        {
-            transform.position = transform.parent.position;
-        }
-    }
 
-    private IEnumerator DestroyAfterDelay(GameObject obj)
-    {
-        yield return new WaitForSeconds(currentShieldTime);
-        Destroy(obj);
-    }
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
