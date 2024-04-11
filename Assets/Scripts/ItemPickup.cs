@@ -11,6 +11,7 @@ public class ItemPickup : MonoBehaviour
         SpeedIncrease,
         ExtraArrow,
         EnergyBall,
+        ExtraSkull,
     }
 
     public ItemType Type;
@@ -36,6 +37,11 @@ public class ItemPickup : MonoBehaviour
             case ItemType.EnergyBall:
                 player.GetComponent<EnergyBallController>().AddEnergyBall();
                 break;
+            case ItemType.ExtraSkull:
+                player.GetComponent<SkullController>().AddSkull();
+                break;
+
+
         }
         Destroy(gameObject);
     }
