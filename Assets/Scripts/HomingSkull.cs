@@ -76,15 +76,13 @@ public class HomingSkull : MonoBehaviour
             // Calculate the midpoint for the effect's instantiation
             Vector2 effectPosition = other.transform.position;
             effectPosition.y += 0.3f;
-            Debug.Log(other.transform.position);
-            Debug.Log(effectPosition);
-            
+
             // Instantiate the chewingEffect at the midpoint
             GameObject effect = Instantiate(chewingEffect, effectPosition, Quaternion.identity);
 
             // Destroy the effect after 1 second
             Destroy(effect, 1f); // 1f represents the delay in seconds before the GameObject is destroyed.
-            
+
             // Destroy the skull
             Destroy(gameObject);
         }
