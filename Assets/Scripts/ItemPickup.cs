@@ -10,6 +10,10 @@ public class ItemPickup : MonoBehaviour
         BlastRadius,
         SpeedIncrease,
         ExtraArrow,
+        EnergyBall,
+        ExtraSkull,
+        ColdShield,
+        PowerUp,
     }
 
     public ItemType Type;
@@ -32,8 +36,26 @@ public class ItemPickup : MonoBehaviour
             case ItemType.ExtraArrow:
                 player.GetComponent<BowController>().arrowsRemaining += 1;
                 break;
+            case ItemType.EnergyBall:
+                player.GetComponent<EnergyBallController>().AddEnergyBall();
+                break;
+            case ItemType.ExtraSkull:
+                player.GetComponent<SkullController>().AddSkull();
+                break;
+            case ItemType.ColdShield:
+                player.GetComponent<ShieldController>().ActivateShield(player);
+                break;
+            case ItemType.PowerUp:
+                player.GetComponent<Player>().Heal(20);
+                break;
+
+
         }
-        Destroy(gameObject);
+      
+            Destroy(gameObject);
+        
+     
+        
     }
 
     private void OnTriggerEnter2D(Collider2D other)

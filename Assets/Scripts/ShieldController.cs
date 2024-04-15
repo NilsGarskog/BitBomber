@@ -15,13 +15,14 @@ public class ShieldController : MonoBehaviour
         {
             AddShieldTime(player);
             CreateShield(player);
-            
+
         }
 
-        else {
+        else
+        {
             AddShieldTime(player);
         }
-       
+
     }
 
     private void CreateShield(GameObject player)
@@ -39,7 +40,7 @@ public class ShieldController : MonoBehaviour
             SpriteRenderer playerRenderer = player.GetComponent<SpriteRenderer>();
             SpriteRenderer shieldRenderer = shieldInstance.GetComponent<SpriteRenderer>();
             shieldRenderer.sortingOrder = 6;
-            
+
         }
         // Ensure the shield is active and visible
         shieldInstance.SetActive(true);
@@ -47,7 +48,6 @@ public class ShieldController : MonoBehaviour
 
     private void HideShield()
     {
-        
         if (shieldInstance != null)
         {
             shieldInstance.SetActive(false);
@@ -68,8 +68,17 @@ public class ShieldController : MonoBehaviour
     {
         Player playerComponent = player.GetComponent<Player>();
         playerComponent.isShielded = true;
-        
-        yield return new WaitForSeconds(currentShieldTime);
+
+
+        while (currentShieldTime > 0f)
+        {
+            // Update the shield time each frame
+            currentShieldTime -= Time.deltaTime;
+
+            // Optionally, update UI or display remaining shield time
+
+            yield return null; // Wait until the next frame
+        }
 
         playerComponent.isShielded = false;
         HideShield();

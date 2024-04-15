@@ -6,6 +6,7 @@ public class Mover : MonoBehaviour
 {
     [SerializeField]
     public float moveSpeed = 5f;
+    
 
     [SerializeField]
     private int playerIndex = 0;
@@ -97,11 +98,37 @@ public class Mover : MonoBehaviour
         activeSpriteRenderer.idle = newDirection == Vector2.zero;
     }
 
+    public Vector2 GetFacingDirection()
+    {
+        if (activeSpriteRenderer == spriteRendererUp)
+        {
+            return Vector2.up;
+        }
+        else if (activeSpriteRenderer == spriteRendererDown)
+        {
+            return Vector2.down;
+        }
+        else if (activeSpriteRenderer == spriteRendererLeft)
+        {
+            return Vector2.left;
+        }
+        else if (activeSpriteRenderer == spriteRendererRight)
+        {
+            return Vector2.right;
+        }
+        else
+        {
+            return Vector2.down;
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.layer == LayerMask.NameToLayer("Explosion") || other.gameObject.layer == LayerMask.NameToLayer("Arrow"))
+        Player player = GetComponent<Player>();
+
+        if ((other.gameObject.layer == LayerMask.NameToLayer("Explosion") || other.gameObject.layer == LayerMask.NameToLayer("Arrow") || other.gameObject.layer == LayerMask.NameToLayer("Skull")) && player.isShielded == false)
         {
-            Player player = GetComponent<Player>();
+            
 
             if (player != null)
 
@@ -123,14 +150,22 @@ public class Mover : MonoBehaviour
                             player.TakeDamage(0);
                         }
                     }
-                    else
+                    if (other.gameObject.layer == LayerMask.NameToLayer("Skull"))
+                    {
+                        player.TakeDamage(50);
+                    }
+
+                    if (other.gameObject.layer == LayerMask.NameToLayer("Explosion"))
                     {
                         player.TakeDamage(20);
                     }
+
                     if (player.currentHealth <= 0)
                     {
                         DeathSequence();
                     }
+                    
+
                 }
             }
         }
