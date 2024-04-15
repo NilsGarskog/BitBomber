@@ -69,6 +69,7 @@ public class ShieldController : MonoBehaviour
         Player playerComponent = player.GetComponent<Player>();
         playerComponent.isShielded = true;
 
+
         while (currentShieldTime > 0f)
         {
             // Update the shield time each frame
