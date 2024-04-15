@@ -3302,10 +3302,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   players:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 434170040}
+  - {fileID: 1683052618}
+  - {fileID: 1979347206}
+  - {fileID: 586004297}
 --- !u!4 &393734439
 Transform:
   m_ObjectHideFlags: 0
@@ -3452,6 +3452,7 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   healthBar: {fileID: 308960532}
+  isShielded: 0
 --- !u!114 &434170043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3591,17 +3592,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ba42be88fd564df5af59329734afe1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
-  playerIndex: 0
-  rigidbody: {fileID: 0}
-  moveDirection: {x: 0, y: 0}
-  inputVector: {x: 0, y: 0}
-  spriteRendererUp: {fileID: 787659404}
-  spriteRendererDown: {fileID: 1192862887}
-  spriteRendererLeft: {fileID: 2081642512}
-  spriteRendererRight: {fileID: 339344735}
-  spriteRendererDeath: {fileID: 1327809755}
-  activeSpriteRenderer: {fileID: 0}
 --- !u!1 &511735880
 GameObject:
   m_ObjectHideFlags: 0
@@ -4019,6 +4009,7 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   healthBar: {fileID: 1472866685}
+  isShielded: 0
 --- !u!114 &586004300
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7131,6 +7122,7 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   healthBar: {fileID: 1082363461}
+  isShielded: 0
 --- !u!114 &1683052621
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8940,6 +8932,7 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   healthBar: {fileID: 1811169710}
+  isShielded: 0
 --- !u!114 &1979347209
 MonoBehaviour:
   m_ObjectHideFlags: 0
