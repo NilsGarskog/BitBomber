@@ -22,15 +22,15 @@ public class Mover : MonoBehaviour
     public AnimatedSpriteRenderer spriteRendererRight;
     public AnimatedSpriteRenderer spriteRendererDeath;
     private AnimatedSpriteRenderer activeSpriteRenderer;
-    
+
 
 
     private void Awake()
     {
-        
+
         rigidbody = GetComponent<Rigidbody2D>();
         activeSpriteRenderer = spriteRendererDown;
-        
+
 
     }
 
@@ -97,30 +97,30 @@ public class Mover : MonoBehaviour
         activeSpriteRenderer.idle = newDirection == Vector2.zero;
     }
 
-   private void OnTriggerEnter2D(Collider2D other)
-{
-    if (other.gameObject.layer == LayerMask.NameToLayer("Explosion"))
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        Player player = GetComponent<Player>();
-        
-        if (player != null)
-
+        if (other.gameObject.layer == LayerMask.NameToLayer("Explosion"))
         {
-            if (player.currentHealth <= 0)
+            Player player = GetComponent<Player>();
+
+            if (player != null)
+
             {
-                DeathSequence();
-            }
-            else
-            {
-                player.TakeDamage(20);
                 if (player.currentHealth <= 0)
                 {
                     DeathSequence();
-            }
+                }
+                else
+                {
+                    player.TakeDamage(20);
+                    if (player.currentHealth <= 0)
+                    {
+                        DeathSequence();
+                    }
+                }
             }
         }
     }
-}
     private void DeathSequence()
     {
         enabled = false;
@@ -138,6 +138,7 @@ public class Mover : MonoBehaviour
     private void OnDeathSequenceEnded()
     {
         gameObject.SetActive(false);
-        FindObjectOfType<GameManager>().CheckWinState();
+        //FindObjectOfType<GameManager>().setDeathIndex(playerIndex);
+        FindObjectOfType<GameManager>().HandlePlayerDeath(playerIndex);
     }
 }

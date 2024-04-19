@@ -31,6 +31,10 @@ MonoBehaviour:
     m_Key: settingsKey
     m_Metadata:
       m_Items: []
+  - m_Id: 4058799485632512
+    m_Key: scoreBoard
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

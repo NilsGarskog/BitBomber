@@ -34,6 +34,10 @@ MonoBehaviour:
     m_Localized: Settings
     m_Metadata:
       m_Items: []
+  - m_Id: 4058799485632512
+    m_Localized: Scoreboard
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
