@@ -6,12 +6,17 @@ public class CanvasController : MonoBehaviour
 {
     public GameObject moveCanvas;
     public GameObject bombCanvas;
+    public GameObject brickDestroyHelpCanvas;
+    public GameObject effectHelpCanvas;
+    public GameObject playerUI;
     private BombController bombController;
     private Mover mover;
     private Vector3 position;
     private bool bombEvent;
-    private bool hasEntered = false;
-
+    private bool hasEntered1 = false;
+    private bool destroyBrickHelp = false;
+    private bool effectHelp = false;
+    private bool activateUI = false;
 
     private void Awake()
     {
@@ -31,9 +36,9 @@ public class CanvasController : MonoBehaviour
             moveCanvas.SetActive(false);
         }
 
-        if(hasEntered == false && transform.position.x <= -3.8 && transform.position.x >= -4.5 && transform.position.y >= 4.5 && transform.position.y <= 5.5)
+        if(hasEntered1 == false && transform.position.x <= -3.8 && transform.position.x >= -4.5 && transform.position.y >= 4.5 && transform.position.y <= 5.5)
         {
-            hasEntered = true;
+            hasEntered1 = true;
             bombCanvas.SetActive(true);
             mover.enabled = false;
             bombController.bombAmount = 1;
@@ -46,6 +51,28 @@ public class CanvasController : MonoBehaviour
             bombEvent = true;
             bombCanvas.SetActive(false);
             mover.enabled = true;
+        }
+        if(destroyBrickHelp == false && transform.position.x >= -2.5)
+        {
+            destroyBrickHelp = true;
+            brickDestroyHelpCanvas.SetActive(true);
+        }
+
+        if(transform.position.x >= 3.5)
+        {
+            brickDestroyHelpCanvas.SetActive(false);
+        }
+
+        if(effectHelp == false && transform.position.x >= 3.5)
+        {
+            effectHelpCanvas.SetActive(true);
+            effectHelp = true;
+        }
+
+        if(transform.position.x >= 3.5 && activateUI == false)
+        {
+            activateUI = true;
+            playerUI.SetActive(true);
         }
     }
 }

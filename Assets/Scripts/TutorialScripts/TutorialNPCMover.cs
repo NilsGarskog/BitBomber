@@ -39,10 +39,12 @@ public class TutorialNPCMover : MonoBehaviour
         // Control sprite rendering based on movement direction
         if (movingUp)
         {
+            mover.SetInputVector(Vector2.up);
             mover.SetDirection(Vector2.up, mover.spriteRendererUp);
         }
         else
         {
+            mover.SetInputVector(Vector2.down);
             mover.SetDirection(Vector2.down, mover.spriteRendererDown);
         }
     }
