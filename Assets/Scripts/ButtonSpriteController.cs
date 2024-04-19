@@ -10,6 +10,7 @@ public class ButtonSpriteController : MonoBehaviour
     public GameObject bombObject;
     public GameObject explosionObject;
     public Image backgroundImage;
+    public AudioManager audioManager;
 
     public void OnSelect(BaseEventData eventData)
     {
@@ -26,5 +27,6 @@ public class ButtonSpriteController : MonoBehaviour
         //backgroundImage.Shake.start = true;
         explosionObject.SetActive(true);
         bombObject.SetActive(false);
+        audioManager.GetComponent<AudioManager>().PlayExplosion();
     }
 }
