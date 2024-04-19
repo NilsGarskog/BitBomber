@@ -19,7 +19,6 @@ public class BombController : MonoBehaviour
 
     [Header("Destructible")]
     public Tilemap destructibleTiles;
-    public Destructible destructiblePrefab;
 
     [SerializeField]
     private int playerIndex = 0;
@@ -103,7 +102,7 @@ public class BombController : MonoBehaviour
 
         if (tile != null)
         {
-            Instantiate(destructiblePrefab, position, Quaternion.identity);
+            Instantiate(destructibleTiles, position, Quaternion.identity);
             destructibleTiles.SetTile(cell, null);
         }
     }
