@@ -26,6 +26,7 @@ public class Mover : MonoBehaviour
 
 
 
+
     private void Awake()
     {
 
@@ -170,6 +171,7 @@ public class Mover : MonoBehaviour
             }
         }
     }
+    
     private void DeathSequence()
     {
         enabled = false;
@@ -187,6 +189,7 @@ public class Mover : MonoBehaviour
     private void OnDeathSequenceEnded()
     {
         gameObject.SetActive(false);
-        FindObjectOfType<GameManager>().CheckWinState();
+        //FindObjectOfType<GameManager>().setDeathIndex(playerIndex);
+        FindObjectOfType<GameManager>().HandlePlayerDeath(playerIndex);
     }
 }

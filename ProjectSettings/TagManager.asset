@@ -39,6 +39,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: SpritesEndscreen
+    uniqueID: 1581176709
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
