@@ -85,7 +85,7 @@ public class Mover : MonoBehaviour
         rigidbody.MovePosition(position + translation);
     }
 
-    private void SetDirection(Vector2 newDirection, AnimatedSpriteRenderer spriteRenderer)
+    public void SetDirection(Vector2 newDirection, AnimatedSpriteRenderer spriteRenderer)
     {
         moveDirection = newDirection;
 
@@ -172,6 +172,13 @@ public class Mover : MonoBehaviour
     }
     private void DeathSequence()
     {
+    if (gameObject.tag == "TutorialNPC")
+    {
+        Player player = GetComponent<Player>();
+        player.TakeDamage(-100);
+    }
+    else
+    {
         enabled = false;
         GetComponent<BombController>().enabled = false;
 
@@ -183,6 +190,7 @@ public class Mover : MonoBehaviour
 
         Invoke(nameof(OnDeathSequenceEnded), 1.25f);
     }
+}
 
     private void OnDeathSequenceEnded()
     {

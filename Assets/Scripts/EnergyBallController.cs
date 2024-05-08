@@ -8,7 +8,7 @@ public class EnergyBallController : MonoBehaviour
 {
     [Header("EnergyBall")]
     public GameObject energyBallPrefab;
-    public int energyBallAmount;
+    public int energyBallAmount = 0;
     public float energyBallSpeed = 15f;
     public GameObject slowedEffectPrefab;
 
@@ -27,7 +27,6 @@ public class EnergyBallController : MonoBehaviour
 
     private void Awake()
     {
-        energyBallAmount = 0;
         mover = GetComponent<Mover>();
         playerInputHandler = GetComponent<PlayerInputHandler>();
     }
@@ -97,6 +96,7 @@ public class EnergyBallController : MonoBehaviour
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("EnergyBall"))
         {
+            Debug.Log("EnergyBall hit");
             Mover hitPlayerMover = mover.GetComponent<Mover>();
             int hitPlayerIndex = hitPlayerMover.GetPlayerIndex();
             // Debug.Log("Hit player index: " + hitPlayerIndex);

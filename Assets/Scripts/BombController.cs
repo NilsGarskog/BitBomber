@@ -20,6 +20,7 @@ public class BombController : MonoBehaviour
     [Header("Destructible")]
     public Tilemap destructibleTiles;
     public Destructible destructiblePrefab;
+    public int destructibleCount = 0;
 
     [SerializeField]
     private int playerIndex = 0;
@@ -80,9 +81,10 @@ public class BombController : MonoBehaviour
 
         position += direction;
 
-
+        
         if (Physics2D.OverlapBox(position, Vector2.one / 2f, 0f, explosionLayerMask))
         {
+            
             ClearDestructible(position);
             return;
         }
@@ -105,6 +107,7 @@ public class BombController : MonoBehaviour
         {
             Instantiate(destructiblePrefab, position, Quaternion.identity);
             destructibleTiles.SetTile(cell, null);
+            destructibleCount++;
         }
     }
 
