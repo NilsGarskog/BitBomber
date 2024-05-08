@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CanvasController : MonoBehaviour
 {
@@ -36,7 +37,7 @@ public class CanvasController : MonoBehaviour
             moveCanvas.SetActive(false);
         }
 
-        if(hasEntered1 == false && transform.position.x <= -3.8 && transform.position.x >= -4.5 && transform.position.y >= 4.5 && transform.position.y <= 5.5)
+        if (hasEntered1 == false && transform.position.x <= -3.8 && transform.position.x >= -4.5 && transform.position.y >= 4.5 && transform.position.y <= 5.5)
         {
             hasEntered1 = true;
             bombCanvas.SetActive(true);
@@ -45,31 +46,35 @@ public class CanvasController : MonoBehaviour
             bombController.bombsRemaining = 1;
             bombEvent = false;
         }
+        if (transform.position.x <= 29.5 && transform.position.x >= 28.3 && transform.position.y >= -6.5 && transform.position.y <= -5.5)
+        {
+            SceneManager.LoadScene("StartScreen");
+        }
 
-        if(bombController.bombsRemaining == 0 && bombEvent == false)
-        { 
+        if (bombController.bombsRemaining == 0 && bombEvent == false)
+        {
             bombEvent = true;
             bombCanvas.SetActive(false);
             mover.enabled = true;
         }
-        if(destroyBrickHelp == false && transform.position.x >= -2.5)
+        if (destroyBrickHelp == false && transform.position.x >= -2.5)
         {
             destroyBrickHelp = true;
             brickDestroyHelpCanvas.SetActive(true);
         }
 
-        if(transform.position.x >= 3.5)
+        if (transform.position.x >= 3.5)
         {
             brickDestroyHelpCanvas.SetActive(false);
         }
 
-        if(effectHelp == false && transform.position.x >= 3.5)
+        if (effectHelp == false && transform.position.x >= 3.5)
         {
             effectHelpCanvas.SetActive(true);
             effectHelp = true;
         }
 
-        if(transform.position.x >= 3.5 && activateUI == false)
+        if (transform.position.x >= 3.5 && activateUI == false)
         {
             activateUI = true;
             playerUI.SetActive(true);

@@ -23,6 +23,10 @@ public class MainMenu : MonoBehaviour
     {
         Invoke(nameof(LoadSettingsMenu), 0.75f);
     }
+    public void GoToTutorial()
+    {
+        Invoke(nameof(LoadTutorial), 0.75f);
+    }
 
     public void LoadNextScene()
     {
@@ -42,5 +46,10 @@ public class MainMenu : MonoBehaviour
     public void LoadSettingsMenu()
     {
         SceneManager.LoadScene("SettingsMenu");
+    }
+
+    public void LoadTutorial()
+    {
+        SceneManager.LoadScene("Tutorial");
     }
 }

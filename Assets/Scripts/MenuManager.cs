@@ -11,6 +11,7 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private GameObject _playMenuFirstSelected;
     [SerializeField] private GameObject _settingsMenuFirstSelected;
     [SerializeField] private GameObject _quitMenuFirstSelected;
+    [SerializeField] private GameObject _tutorialMenuFirstSelected;
 
 
 
@@ -18,6 +19,12 @@ public class MenuManager : MonoBehaviour
     {
         EventSystem.current.SetSelectedGameObject(_settingsMenuFirstSelected);
     }
+
+    public void OpenTutorial()
+    {
+        EventSystem.current.SetSelectedGameObject(_tutorialMenuFirstSelected);
+    }
+
     public void OpenPlayMenu()
     {
         EventSystem.current.SetSelectedGameObject(_playMenuFirstSelected);
@@ -33,9 +40,6 @@ public class MenuManager : MonoBehaviour
     {
         OpenPlayMenu();
     }
-
-
-
     public void OnSettingsPressed()
     {
         OpenSettingsMenu();
@@ -43,5 +47,9 @@ public class MenuManager : MonoBehaviour
     public void OnQuitPressed()
     {
         OpenQuitMenu();
+    }
+    public void OnTutorialPressed()
+    {
+        OpenTutorial();
     }
 }

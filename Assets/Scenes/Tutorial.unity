@@ -138,6 +138,7 @@ GameObject:
   - component: {fileID: 25871193}
   - component: {fileID: 25871198}
   - component: {fileID: 25871191}
+  - component: {fileID: 25871199}
   m_Layer: 3
   m_Name: TutorialNPC
   m_TagString: TutorialNPC
@@ -294,6 +295,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slowedEffectPrefab: {fileID: 418261390384613547, guid: 958b024aa29059249b7ca2d8a5ddc393, type: 3}
+--- !u!114 &25871199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 25871187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d3d41caa9773b04db798c11e94fe9b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tutorialConditionTiles: {fileID: 1300354267}
+  tutorialConditionTilesExit: {fileID: 801759400}
+  tutorialText: {fileID: 1067769107}
 --- !u!1001 &35097614
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -894,11 +910,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Pick up powerups by walking over them!\n\tMakes you able to drop more
-    bombs!\n\n\tIncreases the blast radius of\n\tyour bombs!\n\n\tIncreases your
-    speed!\n"
+    \n          bombs!\n\n\tIncreases the blast radius of\n\tyour bombs!\n\n\tIncreases
+    your speed!\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 865369bb3b788462da72d761a24ee22f, type: 2}
-  m_sharedMaterial: {fileID: 2611679220017073500, guid: 865369bb3b788462da72d761a24ee22f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 325bf327bfa3a4f6ca5581b0c49688dc, type: 2}
+  m_sharedMaterial: {fileID: -371171935231503777, guid: 325bf327bfa3a4f6ca5581b0c49688dc, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -958,7 +974,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 346.43475, w: -64.67645}
+  m_margin: {x: 0, y: 0, z: 317.83374, w: -64.67645}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1117,7 +1133,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -51, y: -294.8}
+  m_AnchoredPosition: {x: -64.1, y: -301.1}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &315701527
@@ -1538,8 +1554,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Destroy Bricks \nto find powerups!\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 865369bb3b788462da72d761a24ee22f, type: 2}
-  m_sharedMaterial: {fileID: 2611679220017073500, guid: 865369bb3b788462da72d761a24ee22f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 325bf327bfa3a4f6ca5581b0c49688dc, type: 2}
+  m_sharedMaterial: {fileID: -371171935231503777, guid: 325bf327bfa3a4f6ca5581b0c49688dc, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2485,7 +2501,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -297.3, y: -235.2}
+  m_AnchoredPosition: {x: -332.4, y: -242.5}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &529205972
@@ -2953,7 +2969,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -297.3, y: -182.1}
+  m_AnchoredPosition: {x: -332.4, y: -183.6}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &603572701
@@ -3174,7 +3190,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -297.3, y: -193}
+  m_AnchoredPosition: {x: -277.3, y: -227.44}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &707767192
@@ -3417,6 +3433,205 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c925853a25564bba9356a81830cf662, type: 3}
+--- !u!1 &801759396
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 801759397}
+  - component: {fileID: 801759400}
+  - component: {fileID: 801759399}
+  - component: {fileID: 801759398}
+  m_Layer: 6
+  m_Name: TutorialConditionTiles 3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &801759397
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 801759396}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1850611435}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!483693784 &801759398
+TilemapRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 801759396}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 2
+  m_ChunkSize: {x: 32, y: 32, z: 32}
+  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
+  m_MaxChunkCount: 16
+  m_MaxFrameAge: 16
+  m_SortOrder: 0
+  m_Mode: 0
+  m_DetectChunkCullingBounds: 0
+  m_MaskInteraction: 0
+--- !u!19719996 &801759399
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 801759396}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0
+  m_UseDelaunayMesh: 0
+--- !u!1839735485 &801759400
+Tilemap:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 801759396}
+  m_Enabled: 1
+  m_Tiles:
+  - first: {x: 21, y: -7, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 2
+      m_TileSpriteIndex: 2
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  m_AnimatedTiles: {}
+  m_TileAssetArray:
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 4f410713f1a944397981f59daf68b96f, type: 2}
+  m_TileSpriteArray:
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 21300000, guid: a43a2d0808fa440949d9bfbf7b2ae293, type: 3}
+  m_TileMatrixArray:
+  - m_RefCount: 1
+    m_Data:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  m_TileColorArray:
+  - m_RefCount: 1
+    m_Data: {r: 1, g: 1, b: 1, a: 1}
+  m_TileObjectToInstantiateArray: []
+  m_AnimationFrameRate: 1
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Origin: {x: 0, y: -9, z: 0}
+  m_Size: {x: 31, y: 14, z: 1}
+  m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
+  m_TileOrientation: 0
+  m_TileOrientationMatrix:
+    e00: 1
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
 --- !u!1 &828595437
 GameObject:
   m_ObjectHideFlags: 0
@@ -3668,16 +3883,6 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: 21, y: -7, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
   - first: {x: 3, y: -6, z: 0}
     second:
       serializedVersion: 2
@@ -3910,7 +4115,7 @@ Tilemap:
       m_AllTileFlags: 1073741825
   m_AnimatedTiles: {}
   m_TileAssetArray:
-  - m_RefCount: 26
+  - m_RefCount: 25
     m_Data: {fileID: 11400000, guid: 09acc13aa8d7c40d7a3c1d7fd5d35885, type: 2}
   - m_RefCount: 0
     m_Data: {fileID: 0}
@@ -3919,7 +4124,7 @@ Tilemap:
   - m_RefCount: 0
     m_Data: {fileID: 0}
   m_TileSpriteArray:
-  - m_RefCount: 26
+  - m_RefCount: 25
     m_Data: {fileID: 21300000, guid: 4d1ed546775384d74813b19bad2855a3, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
@@ -3928,7 +4133,7 @@ Tilemap:
   - m_RefCount: 0
     m_Data: {fileID: 0}
   m_TileMatrixArray:
-  - m_RefCount: 26
+  - m_RefCount: 25
     m_Data:
       e00: 1
       e01: 0
@@ -3947,7 +4152,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 26
+  - m_RefCount: 25
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -8654,8 +8859,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 6, y: -164}
-  m_SizeDelta: {x: 663.0286, y: 103.4844}
+  m_AnchoredPosition: {x: 43.608818, y: -164}
+  m_SizeDelta: {x: 738.2463, y: 103.4844}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &951991204
 MonoBehaviour:
@@ -8684,8 +8889,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 865369bb3b788462da72d761a24ee22f, type: 2}
-  m_sharedMaterial: {fileID: 2611679220017073500, guid: 865369bb3b788462da72d761a24ee22f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 325bf327bfa3a4f6ca5581b0c49688dc, type: 2}
+  m_sharedMaterial: {fileID: -371171935231503777, guid: 325bf327bfa3a4f6ca5581b0c49688dc, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -8793,7 +8998,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 26, y: -94}
+  m_AnchoredPosition: {x: 17.000002, y: -92.00001}
   m_SizeDelta: {x: 663.0286, y: 103.4844}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &968430551
@@ -8818,8 +9023,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Destroy the blocks \nof brick to find Effects!"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 865369bb3b788462da72d761a24ee22f, type: 2}
-  m_sharedMaterial: {fileID: 2611679220017073500, guid: 865369bb3b788462da72d761a24ee22f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 325bf327bfa3a4f6ca5581b0c49688dc, type: 2}
+  m_sharedMaterial: {fileID: -371171935231503777, guid: 325bf327bfa3a4f6ca5581b0c49688dc, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -9195,7 +9400,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1067769106
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9203,16 +9408,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1067769105}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2124628907}
+  m_Father: {fileID: 1146730161}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 771, y: -92}
+  m_AnchoredPosition: {x: 671, y: -22.000015}
   m_SizeDelta: {x: 663.0286, y: 103.4844}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1067769107
@@ -9235,10 +9440,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Exit tutorial \n\t                   |\n\t                  v"
+  m_text: "Exit tutorial \n            |\n\t v"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 865369bb3b788462da72d761a24ee22f, type: 2}
-  m_sharedMaterial: {fileID: 2611679220017073500, guid: 865369bb3b788462da72d761a24ee22f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 325bf327bfa3a4f6ca5581b0c49688dc, type: 2}
+  m_sharedMaterial: {fileID: -371171935231503777, guid: 325bf327bfa3a4f6ca5581b0c49688dc, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -9550,6 +9755,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tutorialConditionTiles: {fileID: 1300354267}
+  tutorialConditionTilesExit: {fileID: 801759400}
+  tutorialText: {fileID: 0}
 --- !u!114 &1074790611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9616,7 +9823,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -297.3, y: -146.6}
+  m_AnchoredPosition: {x: -332.4, y: -145.00002}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1083814030
@@ -10001,6 +10208,7 @@ RectTransform:
   - {fileID: 930941453}
   - {fileID: 1245168362}
   - {fileID: 481744284}
+  - {fileID: 1067769106}
   - {fileID: 2124628907}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10180,8 +10388,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 26, y: -94}
-  m_SizeDelta: {x: 663.0286, y: 103.4844}
+  m_AnchoredPosition: {x: 18, y: -93.718}
+  m_SizeDelta: {x: 721.3223, y: 103.4844}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1234970777
 MonoBehaviour:
@@ -10203,12 +10411,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Press Spacebar or               to drop a bomb!
+  m_text: 'Press Spacebar or       to drop a bomb!
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 865369bb3b788462da72d761a24ee22f, type: 2}
-  m_sharedMaterial: {fileID: 2611679220017073500, guid: 865369bb3b788462da72d761a24ee22f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 325bf327bfa3a4f6ca5581b0c49688dc, type: 2}
+  m_sharedMaterial: {fileID: -371171935231503777, guid: 325bf327bfa3a4f6ca5581b0c49688dc, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -10814,7 +11022,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -297.3, y: -294.1}
+  m_AnchoredPosition: {x: -332.4, y: -301.09998}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1345446537
@@ -10916,8 +11124,8 @@ MonoBehaviour:
 
     bombs and effects!'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 865369bb3b788462da72d761a24ee22f, type: 2}
-  m_sharedMaterial: {fileID: 2611679220017073500, guid: 865369bb3b788462da72d761a24ee22f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 325bf327bfa3a4f6ca5581b0c49688dc, type: 2}
+  m_sharedMaterial: {fileID: -371171935231503777, guid: 325bf327bfa3a4f6ca5581b0c49688dc, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -11463,7 +11671,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 28.3, y: -150.1}
+  m_AnchoredPosition: {x: 17, y: -149.14}
   m_SizeDelta: {x: 663.0286, y: 103.4844}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1424211845
@@ -11486,13 +11694,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\tHeals you for 20 HP!\n\n\tShoot an energyball with \"e\" or\n\n\tGives
-    you a shield that protects\n\tyou from damage for 7 seconds!\n\n\tSend a Haunted
-    skull towards the \n\tnearest player with \"f\" or\n\n\tShoot an arrow with \"v\"
-    or\n\n\t\n"
+  m_text: "Heals you for 20 HP!\n\nShoot an energyball with \"e\" or\n\nGives you
+    a shield that protects\nyou from damage for 7 seconds!\n\nSend a Haunted skull
+    towards the \nnearest player with \"f\" or\n\nShoot an arrow with \"v\" or\n\n\t\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 865369bb3b788462da72d761a24ee22f, type: 2}
-  m_sharedMaterial: {fileID: 2611679220017073500, guid: 865369bb3b788462da72d761a24ee22f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 325bf327bfa3a4f6ca5581b0c49688dc, type: 2}
+  m_sharedMaterial: {fileID: -371171935231503777, guid: 325bf327bfa3a4f6ca5581b0c49688dc, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -11600,7 +11807,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -297.3, y: -159.8}
+  m_AnchoredPosition: {x: -277.3, y: -169.2}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1458678673
@@ -11721,7 +11928,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -295.3, y: -107.4}
+  m_AnchoredPosition: {x: -332.4, y: -103.8}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1509128675
@@ -11902,7 +12109,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.9, y: -145}
+  m_AnchoredPosition: {x: -24.700006, y: -145.00002}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1548861567
@@ -12170,7 +12377,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -297.3, y: -250}
+  m_AnchoredPosition: {x: -277.3, y: -277.2}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1712926518
@@ -12306,7 +12513,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -44.7, y: -256.9}
+  m_AnchoredPosition: {x: -70.999985, y: -262.5}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1788080687
@@ -12601,6 +12808,7 @@ Transform:
   - {fileID: 937509643}
   - {fileID: 855804157}
   - {fileID: 1300354264}
+  - {fileID: 801759397}
   - {fileID: 2115458164}
   - {fileID: 67901879}
   m_Father: {fileID: 0}
@@ -13269,8 +13477,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Use WASD or the directional buttons to move!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 865369bb3b788462da72d761a24ee22f, type: 2}
-  m_sharedMaterial: {fileID: 2611679220017073500, guid: 865369bb3b788462da72d761a24ee22f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 325bf327bfa3a4f6ca5581b0c49688dc, type: 2}
+  m_sharedMaterial: {fileID: -371171935231503777, guid: 325bf327bfa3a4f6ca5581b0c49688dc, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -13722,7 +13930,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 968430550}
-  - {fileID: 1067769106}
   - {fileID: 1348504756}
   - {fileID: 1424211844}
   - {fileID: 1509128674}
