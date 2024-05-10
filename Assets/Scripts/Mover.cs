@@ -6,7 +6,7 @@ public class Mover : MonoBehaviour
 {
     [SerializeField]
     public float moveSpeed = 5f;
-    
+
 
     [SerializeField]
     private int playerIndex = 0;
@@ -86,7 +86,7 @@ public class Mover : MonoBehaviour
         rigidbody.MovePosition(position + translation);
     }
 
-    private void SetDirection(Vector2 newDirection, AnimatedSpriteRenderer spriteRenderer)
+    public void SetDirection(Vector2 newDirection, AnimatedSpriteRenderer spriteRenderer)
     {
         moveDirection = newDirection;
 
@@ -129,7 +129,7 @@ public class Mover : MonoBehaviour
 
         if ((other.gameObject.layer == LayerMask.NameToLayer("Explosion") || other.gameObject.layer == LayerMask.NameToLayer("Arrow") || other.gameObject.layer == LayerMask.NameToLayer("Skull")) && player.isShielded == false)
         {
-            
+
 
             if (player != null)
 
@@ -165,7 +165,7 @@ public class Mover : MonoBehaviour
                     {
                         DeathSequence();
                     }
-                    
+
 
                 }
             }
@@ -174,16 +174,25 @@ public class Mover : MonoBehaviour
     
     private void DeathSequence()
     {
-        enabled = false;
-        GetComponent<BombController>().enabled = false;
+        if (gameObject.tag == "TutorialNPC")
+        {
+            Player player = GetComponent<Player>();
+            player.TakeDamage(-100);
+            GetComponent<TileController>().ExitTutorial();
+        }
+        else
+        {
+            enabled = false;
+            GetComponent<BombController>().enabled = false;
 
-        spriteRendererDown.enabled = false;
-        spriteRendererUp.enabled = false;
-        spriteRendererLeft.enabled = false;
-        spriteRendererRight.enabled = false;
-        spriteRendererDeath.enabled = true;
+            spriteRendererDown.enabled = false;
+            spriteRendererUp.enabled = false;
+            spriteRendererLeft.enabled = false;
+            spriteRendererRight.enabled = false;
+            spriteRendererDeath.enabled = true;
 
-        Invoke(nameof(OnDeathSequenceEnded), 1.25f);
+            Invoke(nameof(OnDeathSequenceEnded), 1.25f);
+        }
     }
 
     private void OnDeathSequenceEnded()

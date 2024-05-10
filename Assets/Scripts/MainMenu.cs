@@ -7,21 +7,49 @@ public class MainMenu : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        Invoke(nameof(LoadNextScene), 0.75f);
     }
 
     public void QuitGame()
     {
-        Debug.Log("Quit");
-        Application.Quit();
+        Invoke(nameof(LoadQuitGame), 0.75f);
     }
 
     public void GoToMainMenu()
     {
-        SceneManager.LoadScene("StartScreen");
+        Invoke(nameof(LoadMainMenu), 0.75f);
     }
     public void GoToSettingsMenu()
     {
+        Invoke(nameof(LoadSettingsMenu), 0.75f);
+    }
+    public void GoToTutorial()
+    {
+        Invoke(nameof(LoadTutorial), 0.75f);
+    }
+
+    public void LoadNextScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void LoadQuitGame()
+    {
+        Application.Quit();
+    }
+
+    public void LoadMainMenu()
+    {
+        SceneManager.LoadScene("StartScreen");
+    }
+
+    public void LoadSettingsMenu()
+    {
         SceneManager.LoadScene("SettingsMenu");
+    }
+
+    public void LoadTutorial()
+    {
+        SceneManager.LoadScene("Tutorial");
     }
 }

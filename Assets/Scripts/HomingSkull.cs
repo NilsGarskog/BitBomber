@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class HomingSkull : MonoBehaviour
@@ -49,9 +50,14 @@ public class HomingSkull : MonoBehaviour
         // Assign the second closest player as the target
         target = secondClosestPlayer;
 
+        // FOr the homingskull to target the tutorialNPC in the tutorial scene
         if (target == null)
         {
-            target = closestPlayer; // Fallback to the closest player if there's only one player
+            GameObject tutorialNPC = GameObject.FindWithTag("TutorialNPC");
+            if (tutorialNPC != null)
+            {
+                target = tutorialNPC.transform; // Target the TutorialNPC if it exists
+            }
         }
     }
 
@@ -71,8 +77,8 @@ public class HomingSkull : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Player")) // Ensure it's the target object
-        {
+        if (other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("TutorialNPC")) // Ensure it's the target object
+        {   
             // Calculate the midpoint for the effect's instantiation
             Vector2 effectPosition = other.transform.position;
             effectPosition.y += 0.3f;
