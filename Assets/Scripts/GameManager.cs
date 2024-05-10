@@ -1,33 +1,102 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
+using System;
+using UnityEditor.Localization.Plugins.XLIFF.V20;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public GameObject[] players;
-
-    public void CheckWinState()
+    private int[] scoreBoard = new int[4] { 10, 10, 10, 10 };
+    private int scoreBoardIndex = 0;
+    private List<int> activePlayerIndices = new List<int>();
+    public static GameManager instance = null;
+    private int numberOfPlayers;
+    private void Start()
     {
-        int aliveCount = 0;
+        ResetActivePlayers();
+    }
+    void Awake()
+    {
 
-        foreach (GameObject player in players)
+        if (instance == null)
         {
-            if (player.activeSelf)
-            {
-                aliveCount++;
-            }
+            instance = this;
+        }
+        else if (instance != this)
+        {
+            Destroy(gameObject);
         }
 
-        if (aliveCount <= 1)
+        DontDestroyOnLoad(gameObject);
+    }
+
+    private void ResetActivePlayers()
+    {
+        players = GameObject.FindGameObjectsWithTag("Player");
+        numberOfPlayers = players.Length;
+        activePlayerIndices.Clear();
+        for (int i = 0; i < numberOfPlayers; i++)
         {
-            Invoke(nameof(NewRound), 3f);
+            activePlayerIndices.Add(i);
         }
+    }
+    public void HandlePlayerDeath(int playerIndex)
+    {
+        activePlayerIndices.Remove(playerIndex);
+        setDeathIndex(playerIndex);
     }
 
     private void NewRound()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene("MainScene");
+        StartCoroutine(WaitForSceneLoadAndResetPlayers());
+        ResetScoreBoard();
     }
+    private IEnumerator WaitForSceneLoadAndResetPlayers()
+    {
+        yield return new WaitForSeconds(0.1f);
+        ResetActivePlayers();
+    }
+    public void EndGame()
+    {
+        SceneManager.LoadScene("EndScreen", LoadSceneMode.Single);
+        Invoke(nameof(NewRound), 5f);
+    }
+    public void setDeathIndex(int index)
+    {
+        if (scoreBoardIndex < scoreBoard.Length - 1)
+        {
+            scoreBoard[scoreBoardIndex] = index;
+            scoreBoardIndex++;
+        }
+        if (activePlayerIndices.Count <= 1)
+        {
+            if (activePlayerIndices.Count == 1)
+            {
+                int winningPlayerIndex = activePlayerIndices[0];
+                scoreBoard[scoreBoardIndex] = winningPlayerIndex;
+
+            }
+            Invoke(nameof(EndGame), 2f);
+        }
+    }
+
+    public void ResetScoreBoard()
+    {
+        for (int i = 0; i < scoreBoard.Length; i++)
+        {
+            scoreBoard[i] = 10;
+        }
+        scoreBoardIndex = 0;
+    }
+
+    public int[] GetScoreBoard()
+    {
+        return scoreBoard;
+    }
+
 
 }
