@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 083e884aa8a4ea1498e5f35d9d5516db
+guid: a443f81df5a3946c69bc4d578ef670fe
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,7 +97,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: FrogmanRight-Sheet_0
+      name: Troll UI elements_0
       rect:
         serializedVersion: 2
         x: 0
@@ -111,14 +111,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 915202277035248efa023b60071ab9cc
-      internalID: 230286337
+      spriteID: 6595212755ef84ba196f8053a233f4ac
+      internalID: 949989164
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FrogmanRight-Sheet_1
+      name: Troll UI elements_1
       rect:
         serializedVersion: 2
         x: 32
@@ -132,50 +132,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 06edeb2e470724f24a8b4f9ffc34ddbc
-      internalID: -1751341201
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: FrogmanRight-Sheet_2
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 21464f82ccc024fb880b3f744dd43ec8
-      internalID: -1002711302
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: FrogmanRight-Sheet_3
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3849232927c7848459a4e5fb3916f54c
-      internalID: 1354275047
+      spriteID: dfca8f1e1c5444714aa5da78f2a69b45
+      internalID: -930181309
       vertices: []
       indices: 
       edges: []
@@ -191,10 +149,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      FrogmanRight-Sheet_0: 230286337
-      FrogmanRight-Sheet_1: -1751341201
-      FrogmanRight-Sheet_2: -1002711302
-      FrogmanRight-Sheet_3: 1354275047
+      Troll UI elements_0: 949989164
+      Troll UI elements_1: -930181309
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
