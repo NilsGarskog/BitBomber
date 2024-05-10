@@ -10,32 +10,40 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
-  m_Name: LanguageChanger_en
+  m_Name: LanguageTable_en
   m_EditorClassIdentifier: 
   m_LocaleId:
     m_Code: en
-  m_SharedData: {fileID: 11400000, guid: 1307b0173b91d194fa519d6e1d2136de, type: 2}
+  m_SharedData: {fileID: 11400000, guid: f2ebb4fefcbcb41d9a79456176b1fffc, type: 2}
   m_Metadata:
     m_Items: []
   m_TableData:
-  - m_Id: 59442610176
+  - m_Id: 37261139968
     m_Localized: Play
     m_Metadata:
       m_Items: []
-  - m_Id: 1073931501568
-    m_Localized: Quit
+  - m_Id: 427205582848
+    m_Localized: Tutorial
     m_Metadata:
       m_Items: []
-  - m_Id: 1147080163328
-    m_Localized: Back
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1083049918464
+  - m_Id: 687093047296
     m_Localized: Settings
     m_Metadata:
       m_Items: []
-  - m_Id: 4058799485632512
+  - m_Id: 849353891840
+    m_Localized: Quit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 975250120704
+    m_Localized: Back
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1126253453312
     m_Localized: Scoreboard
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2758424911872
+    m_Localized: Settings
     m_Metadata:
       m_Items: []
   references:

@@ -10,39 +10,47 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
-  m_Name: LanguageChanger Shared Data
+  m_Name: LanguageTable Shared Data
   m_EditorClassIdentifier: 
-  m_TableCollectionName: LanguageChanger
-  m_TableCollectionNameGuidString: 1307b0173b91d194fa519d6e1d2136de
+  m_TableCollectionName: LanguageTable
+  m_TableCollectionNameGuidString: f2ebb4fefcbcb41d9a79456176b1fffc
   m_Entries:
-  - m_Id: 1147080163328
-    m_Key: backKey
+  - m_Id: 37261139968
+    m_Key: playButton
     m_Metadata:
       m_Items: []
-  - m_Id: 59442610176
-    m_Key: playKey
+  - m_Id: 427205582848
+    m_Key: tutorialButton
     m_Metadata:
       m_Items: []
-  - m_Id: 1073931501568
-    m_Key: quitKey
+  - m_Id: 687093047296
+    m_Key: settingsButton
     m_Metadata:
       m_Items: []
-  - m_Id: 1083049918464
-    m_Key: settingsKey
+  - m_Id: 849353891840
+    m_Key: quitButton
     m_Metadata:
       m_Items: []
-  - m_Id: 4058799485632512
-    m_Key: scoreBoard
+  - m_Id: 975250120704
+    m_Key: backButton
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1126253453312
+    m_Key: ScoreBoardText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2758424911872
+    m_Key: settingsText
     m_Metadata:
       m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
-    rid: 2686983315443417112
+    rid: 159505287201423400
   references:
     version: 2
     RefIds:
-    - rid: 2686983315443417112
+    - rid: 159505287201423400
       type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
       data:
-        m_CustomEpoch: 1712217853949
+        m_CustomEpoch: 1715332702262

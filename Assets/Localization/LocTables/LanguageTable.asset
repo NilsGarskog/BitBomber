@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5be51871efa6c3e4eae1703925c8f5ac, type: 3}
-  m_Name: LanguageChanger
+  m_Name: LanguageTable
   m_EditorClassIdentifier: 
-  m_SharedTableData: {fileID: 11400000, guid: 1307b0173b91d194fa519d6e1d2136de, type: 2}
+  m_SharedTableData: {fileID: 11400000, guid: f2ebb4fefcbcb41d9a79456176b1fffc, type: 2}
   m_Tables:
-  - {fileID: 11400000, guid: acabb2649fffc1f4884b7344d11a9785, type: 2}
-  - {fileID: 11400000, guid: 963d05afbf79077428f24d559eda57b7, type: 2}
-  - {fileID: 11400000, guid: 4bbd00fb3ff5c2d4888d1e63b1d808e3, type: 2}
-  - {fileID: 11400000, guid: d07ac586a87582b4b96b0b942c63e094, type: 2}
+  - {fileID: 11400000, guid: d497be9d001154a068526bd5a5c7c086, type: 2}
+  - {fileID: 11400000, guid: 93f75611a80734009bfd8bb8d2381f48, type: 2}
+  - {fileID: 11400000, guid: 738b989b672f1416089159853597aa25, type: 2}
+  - {fileID: 11400000, guid: d88616799ea94430780fed21bc835dde, type: 2}
   m_Extensions: []
   m_Group: String Table
   references:
