@@ -6,7 +6,6 @@ public class AudioManager : MonoBehaviour
 {
     [SerializeField] AudioSource musicSource;
     public AudioClip background;
-    public AudioClip explosion;
 
     public static AudioManager instance;
 
@@ -28,11 +27,6 @@ public class AudioManager : MonoBehaviour
     {
         musicSource.clip = background;
         musicSource.Play();
-    }
-
-    public void PlayExplosion()
-    {
-        musicSource.PlayOneShot(explosion);
     }
 
 
