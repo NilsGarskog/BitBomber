@@ -40,7 +40,7 @@ public class ScoreManager : MonoBehaviour
     {
         for (int i = 0; i < positionTextFields.Length; i++)
         {
-            positionTextFields[i].text = $"{i + 1}.";
+            positionTextFields[i].text = $"{i + 1}";
         }
     }
     void UpdatePlayerSprites(int[] scoreBoardWithout10)
