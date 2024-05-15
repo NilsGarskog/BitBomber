@@ -127,6 +127,11 @@ public class Mover : MonoBehaviour
     {
         Player player = GetComponent<Player>();
 
+        if (other.gameObject.tag == "Death")
+        {
+            DeathSequence();
+        }
+
         if ((other.gameObject.layer == LayerMask.NameToLayer("Explosion") || other.gameObject.layer == LayerMask.NameToLayer("Arrow") || other.gameObject.layer == LayerMask.NameToLayer("Skull")) && player.isShielded == false)
         {
 
@@ -171,7 +176,7 @@ public class Mover : MonoBehaviour
             }
         }
     }
-    
+
     private void DeathSequence()
     {
         if (gameObject.tag == "TutorialNPC")
@@ -184,6 +189,10 @@ public class Mover : MonoBehaviour
         {
             enabled = false;
             GetComponent<BombController>().enabled = false;
+            GetComponent<SkullController>().enabled = false;
+            GetComponent<BowController>().enabled = false;
+            GetComponent<ShieldController>().enabled = false;
+            GetComponent<EnergyBallController>().enabled = false;
 
             spriteRendererDown.enabled = false;
             spriteRendererUp.enabled = false;
