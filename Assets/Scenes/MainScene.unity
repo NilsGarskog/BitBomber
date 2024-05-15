@@ -3912,7 +3912,7 @@ GameObject:
   - component: {fileID: 586518111}
   - component: {fileID: 586518110}
   - component: {fileID: 586518109}
-  - component: {fileID: 586518108}
+  - component: {fileID: 586518112}
   m_Layer: 5
   m_Name: EndSkull
   m_TagString: Untagged
@@ -3920,27 +3920,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!95 &586518108
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 586518107}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 542e6fd3884e441eaba6a7398fe16fe9, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &586518109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3998,6 +3977,27 @@ RectTransform:
   m_AnchoredPosition: {x: -150, y: 198}
   m_SizeDelta: {x: 61.948, y: 61.948}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!95 &586518112
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 586518107}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 542e6fd3884e441eaba6a7398fe16fe9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &635664826
 GameObject:
   m_ObjectHideFlags: 0
@@ -5426,7 +5426,7 @@ GameObject:
   - component: {fileID: 800444260}
   - component: {fileID: 800444263}
   - component: {fileID: 800444262}
-  - component: {fileID: 800444261}
+  - component: {fileID: 800444264}
   m_Layer: 5
   m_Name: EndSkull (1)
   m_TagString: Untagged
@@ -5453,27 +5453,6 @@ RectTransform:
   m_AnchoredPosition: {x: 164, y: 197.00003}
   m_SizeDelta: {x: 61.948, y: 61.948}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!95 &800444261
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 800444259}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 542e6fd3884e441eaba6a7398fe16fe9, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &800444262
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5512,6 +5491,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 800444259}
   m_CullTransparentMesh: 1
+--- !u!95 &800444264
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 800444259}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 542e6fd3884e441eaba6a7398fe16fe9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &828595437
 GameObject:
   m_ObjectHideFlags: 0
