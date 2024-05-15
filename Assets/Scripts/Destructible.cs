@@ -10,7 +10,7 @@ public class Destructible : MonoBehaviour
 
 
     [Range(0f, 1f)]
-    public float itemSpawnChance = 0.2f;
+    public float itemSpawnChance = 0.746f;
     public GameObject[] spawnableItems;
     private GameObject spawnItemTimer;
     private SpawnItemTimer timerScript;
@@ -18,7 +18,7 @@ public class Destructible : MonoBehaviour
     // Create a new array with the same length as spawnableItems
     GameObject[] regularItems = new GameObject[5];
     GameObject[] specialItems = new GameObject[3];
-    
+
 
     public void Start()
     {
@@ -31,7 +31,6 @@ public class Destructible : MonoBehaviour
             Array.Copy(spawnableItems, 5, specialItems, 0, 3); // Copy the 7th and 8th items
             regularItems = regularItems.Concat(specialItems).ToArray();
         }
-        Debug.Log(regularItems.Length);
     }
 
     private void SpawnItem(float spawnChance, GameObject[] items)
