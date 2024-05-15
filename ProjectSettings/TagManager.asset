@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Button
   - TutorialNPC
+  - Death
+  - normal
   layers:
   - Default
   - TransparentFX
@@ -20,7 +22,7 @@ TagManager:
   - Arrow
   - EnergyBall
   - Skull
-  - 
+  - EndGameBlock
   - 
   - 
   - 

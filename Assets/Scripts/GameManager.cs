@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     private List<int> activePlayerIndices = new List<int>();
     public static GameManager instance = null;
     private int numberOfPlayers;
+    public GameObject endGameText;
     private void Start()
     {
         ResetActivePlayers();
@@ -82,6 +83,10 @@ public class GameManager : MonoBehaviour
             }
             Invoke(nameof(EndGame), 2f);
         }
+        if (activePlayerIndices.Count == 2)
+        {
+            StartCoroutine(startEndGame());
+        }
     }
 
     public void ResetScoreBoard()
@@ -91,6 +96,21 @@ public class GameManager : MonoBehaviour
             scoreBoard[i] = 10;
         }
         scoreBoardIndex = 0;
+    }
+    IEnumerator startEndGame()
+    {
+        yield return new WaitForSeconds(5f);
+        // Find the GameObject
+        GameObject endGameSmallerController = GameObject.Find("EndGameSmallerController");
+
+        // Get the script
+        EndGameTiles endGameTilesScript = endGameSmallerController.GetComponent<EndGameTiles>();
+
+        //Activate EndgameText
+        endGameText.SetActive(true);
+
+        // Call the function
+        endGameTilesScript.startEndGame();
     }
 
     public int[] GetScoreBoard()
