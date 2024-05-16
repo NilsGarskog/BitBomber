@@ -27,7 +27,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 687093047296
-    m_Localized: "Inst\xE4llningar"
+    m_Localized: Konfigurationer
     m_Metadata:
       m_Items: []
   - m_Id: 849353891840
@@ -39,11 +39,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1126253453312
-    m_Localized: "Po\xE4ngtavla"
+    m_Localized: Resultat
     m_Metadata:
       m_Items: []
   - m_Id: 2758424911872
-    m_Localized: "Inst\xE4llningar"
+    m_Localized: Konfigurationer
     m_Metadata:
       m_Items: []
   references:
