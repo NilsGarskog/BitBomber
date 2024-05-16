@@ -8,6 +8,7 @@ public class EndGameTiles : MonoBehaviour
     public Tilemap endGameTiles; // Reference to the EndGameTiles Tilemap
     public GameObject blockPreFab;
     private float timeBetween = 0.4f;
+    public AudioManagerMainScene audioManager;
 
     /*
         void Start()
@@ -24,6 +25,7 @@ public class EndGameTiles : MonoBehaviour
 
     IEnumerator CreateBlocks()
     {
+        audioManager.suddenDeath();
         for (int i = -5; i < 6; i++)
         {
             Instantiate(blockPreFab, new Vector2(-6, i), Quaternion.identity);
@@ -86,11 +88,5 @@ public class EndGameTiles : MonoBehaviour
             Instantiate(blockPreFab, new Vector2(i, -3), Quaternion.identity);
             yield return new WaitForSeconds(timeBetween);
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 }

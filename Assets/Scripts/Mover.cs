@@ -24,6 +24,9 @@ public class Mover : MonoBehaviour
     public AnimatedSpriteRenderer spriteRendererDeath;
     public AnimatedSpriteRenderer activeSpriteRenderer;
 
+    public AudioManagerMainScene audioManager;
+
+
 
 
 
@@ -150,6 +153,7 @@ public class Mover : MonoBehaviour
                         if (other.gameObject.GetComponent<Arrow>().shooterIndex != playerIndex)
                         {
                             player.TakeDamage(50);
+                            audioManager.arrowHit();
                         }
                         else
                         {
@@ -159,6 +163,7 @@ public class Mover : MonoBehaviour
                     if (other.gameObject.layer == LayerMask.NameToLayer("Skull"))
                     {
                         player.TakeDamage(50);
+                        audioManager.skullHit();
                     }
 
                     if (other.gameObject.layer == LayerMask.NameToLayer("Explosion"))

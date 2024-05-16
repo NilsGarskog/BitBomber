@@ -11,9 +11,10 @@ public class EnergyBallController : MonoBehaviour
     public int energyBallAmount = 0;
     public float energyBallSpeed = 15f;
     public GameObject slowedEffectPrefab;
+    public AudioManagerMainScene audioManager;
 
     private Vector2 facingDirection = Vector2.zero;
-    
+
     private Mover mover;
     private PlayerInputHandler playerInputHandler;
 
@@ -40,7 +41,7 @@ public class EnergyBallController : MonoBehaviour
     }
 
     private void ShootEnergyBall()
-    {   
+    {
         facingDirection = mover.GetFacingDirection();
         Vector2 position = transform.position;
         position.x = Mathf.Round(position.x);
@@ -102,7 +103,7 @@ public class EnergyBallController : MonoBehaviour
             // Debug.Log("Hit player index: " + hitPlayerIndex);
 
             StartCoroutine(SlowPlayerMovement(hitPlayerMover, 5f, 0.5f));
-
+            audioManager.slowedDown();
             Destroy(other.gameObject);
         }
     }

@@ -8,6 +8,7 @@ public class ShieldController : MonoBehaviour
     public float currentShieldTime = 0f;
     private GameObject shieldInstance;
     private Coroutine shieldCoroutine;
+    public AudioManagerMainScene audioManager;
 
     public void ActivateShield(GameObject player)
     {
@@ -56,6 +57,7 @@ public class ShieldController : MonoBehaviour
 
     private void AddShieldTime(GameObject player)
     {
+        audioManager.shield();
         if (shieldCoroutine != null)
         {
             StopCoroutine(shieldCoroutine);
