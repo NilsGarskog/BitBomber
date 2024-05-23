@@ -154,7 +154,7 @@ MonoBehaviour:
   - {fileID: 1248597446, guid: aa1221f5dd3f245e086cffd978756c9c, type: 3}
   - {fileID: 1215186333, guid: aa1221f5dd3f245e086cffd978756c9c, type: 3}
   idleSprite: {fileID: 21300000, guid: a75f8c9f7196a4c9ab61bafae6dea41e, type: 3}
-  animationTime: 0.1666667
+  animationTime: 0.125
   loop: 0
   idle: 0
 --- !u!114 &-2315999527288832478
