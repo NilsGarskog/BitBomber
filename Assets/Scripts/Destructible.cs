@@ -23,13 +23,16 @@ public class Destructible : MonoBehaviour
     public void Start()
     {
         Destroy(gameObject, destructionTime);
-        spawnItemTimer = GameObject.Find("SpawnItemTimer");
-        timerScript = spawnItemTimer.GetComponent<SpawnItemTimer>();
-        Array.Copy(spawnableItems, 0, regularItems, 0, 5); // Copy the first 5 items
-        if (timerScript.timer == true)
-        {
-            Array.Copy(spawnableItems, 5, specialItems, 0, 3); // Copy the 7th and 8th items
-            regularItems = regularItems.Concat(specialItems).ToArray();
+        if (spawnItemTimer != null)
+        {    
+            spawnItemTimer = GameObject.Find("SpawnItemTimer");
+            timerScript = spawnItemTimer.GetComponent<SpawnItemTimer>();
+            Array.Copy(spawnableItems, 0, regularItems, 0, 5); // Copy the first 5 items
+            if (timerScript.timer == true)
+            {
+                Array.Copy(spawnableItems, 5, specialItems, 0, 3); // Copy the 7th and 8th items
+                regularItems = regularItems.Concat(specialItems).ToArray();
+            }
         }
     }
 
