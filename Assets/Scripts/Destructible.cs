@@ -23,10 +23,12 @@ public class Destructible : MonoBehaviour
     public void Start()
     {
         Destroy(gameObject, destructionTime);
-        if (spawnItemTimer != null)
-        {    
-            spawnItemTimer = GameObject.Find("SpawnItemTimer");
-            timerScript = spawnItemTimer.GetComponent<SpawnItemTimer>();
+        //if (spawnItemTimer != null)
+        //{
+        spawnItemTimer = GameObject.Find("SpawnItemTimer");
+        timerScript = spawnItemTimer.GetComponent<SpawnItemTimer>();
+        if (timerScript != null)
+        {
             Array.Copy(spawnableItems, 0, regularItems, 0, 5); // Copy the first 5 items
             if (timerScript.timer == true)
             {
@@ -41,12 +43,14 @@ public class Destructible : MonoBehaviour
         if (items.Length > 0 && UnityEngine.Random.value < spawnChance)
         {
             int randomIndex = UnityEngine.Random.Range(0, items.Length);
+            Debug.Log("current item " + items);
             Instantiate(items[randomIndex], transform.position, Quaternion.identity);
         }
     }
 
     private void OnDestroy()
     {
+        Debug.Log("Destructible object destroyed" + regularItems.Length);
         SpawnItem(itemSpawnChance, regularItems);
     }
 

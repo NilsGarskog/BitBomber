@@ -52,9 +52,9 @@ public class GameManager : MonoBehaviour
 
     private void NewRound()
     {
-        SceneManager.LoadScene("MainScene");
-        StartCoroutine(WaitForSceneLoadAndResetPlayers());
-        ResetScoreBoard();
+        SceneManager.LoadScene("StartScreen");
+        //StartCoroutine(WaitForSceneLoadAndResetPlayers());
+        //ResetScoreBoard();
     }
     private IEnumerator WaitForSceneLoadAndResetPlayers()
     {
@@ -83,7 +83,7 @@ public class GameManager : MonoBehaviour
             }
             Invoke(nameof(EndGame), 2f);
         }
-        if (activePlayerIndices.Count == 2)
+        if (activePlayerIndices.Count <= 2)
         {
             StartCoroutine(startEndGame());
         }
