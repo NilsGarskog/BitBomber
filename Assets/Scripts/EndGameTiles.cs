@@ -14,21 +14,28 @@ public class EndGameTiles : MonoBehaviour
     private GameManager gameManager;
     private SpawnItemTimer spawnItemTimer;
     private bool EndGameStarted = false;
+    private int playerDead;
 
 
     void Start()
     {
+        playerDead = 0;
         spawnItemTimer = FindAnyObjectByType<SpawnItemTimer>();
-        gameManager = FindAnyObjectByType<GameManager>();
+        //gameManager = FindAnyObjectByType<GameManager>();
     }
 
     void Update()
     {
-        if (gameManager.activePlayerIndices.Count <= 2 && !EndGameStarted && spawnItemTimer.timer)
+        if (playerDead >= 2 && !EndGameStarted && spawnItemTimer.timer)
         {
             EndGameStarted = true;
             StartCoroutine(startEndGame());
         }
+    }
+
+    public void addDeath()
+    {
+        playerDead++;
     }
 
 

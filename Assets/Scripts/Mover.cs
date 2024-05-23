@@ -13,6 +13,7 @@ public class Mover : MonoBehaviour
 
     //public Rigidbody2D rigidbody { get; private set; }
     private Rigidbody2D rigidbody;
+    private EndGameTiles endGameTiles;
 
     private Vector2 moveDirection = Vector2.zero;
     private Vector2 inputVector = Vector2.zero;
@@ -35,6 +36,7 @@ public class Mover : MonoBehaviour
 
         rigidbody = GetComponent<Rigidbody2D>();
         activeSpriteRenderer = spriteRendererDown;
+        endGameTiles = FindObjectOfType<EndGameTiles>();
 
 
     }
@@ -192,6 +194,7 @@ public class Mover : MonoBehaviour
         }
         else
         {
+            endGameTiles.addDeath();
             enabled = false;
             GetComponent<BombController>().enabled = false;
             GetComponent<SkullController>().enabled = false;
