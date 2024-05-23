@@ -43,14 +43,12 @@ public class Destructible : MonoBehaviour
         if (items.Length > 0 && UnityEngine.Random.value < spawnChance)
         {
             int randomIndex = UnityEngine.Random.Range(0, items.Length);
-            Debug.Log("current item " + items);
             Instantiate(items[randomIndex], transform.position, Quaternion.identity);
         }
     }
 
     private void OnDestroy()
     {
-        Debug.Log("Destructible object destroyed" + regularItems.Length);
         SpawnItem(itemSpawnChance, regularItems);
     }
 
