@@ -32,15 +32,13 @@ public class TutorialCollider : MonoBehaviour
         // Restore the original movement speed of the player
         mover.moveSpeed /= slowFactor;
     }
-    
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("EnergyBall"))
         {
-            Debug.Log("EnergyBall hit");
             Mover hitPlayerMover = mover.GetComponent<Mover>();
             int hitPlayerIndex = hitPlayerMover.GetPlayerIndex();
-            // Debug.Log("Hit player index: " + hitPlayerIndex);
 
             StartCoroutine(SlowPlayerMovement(hitPlayerMover, 5f, 0.5f));
 

@@ -8968,11 +8968,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42ea2d9f3739d443681bcc113c2b0217, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  players:
-  - {fileID: 1074790596}
-  - {fileID: 1072776748}
-  - {fileID: 1874126761}
-  - {fileID: 741737180}
   activePlayerIndices: 
 --- !u!4 &1481300245
 Transform:

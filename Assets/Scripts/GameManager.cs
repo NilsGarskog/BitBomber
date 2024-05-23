@@ -8,7 +8,6 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject[] players;
     private int[] scoreBoard = new int[4] { 10, 10, 10, 10 };
     private int scoreBoardIndex = 0;
     public List<int> activePlayerIndices = new List<int>();
@@ -21,7 +20,6 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
-
         if (instance == null)
         {
             instance = this;
@@ -58,6 +56,7 @@ public class GameManager : MonoBehaviour
         //StartCoroutine(WaitForSceneLoadAndResetPlayers());
         ResetActivePlayers();
         ResetScoreBoard();
+        scoreBoardIndex = 0;
     }
     private void WaitForSceneLoadAndResetPlayers()
     {

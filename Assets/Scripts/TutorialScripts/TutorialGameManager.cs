@@ -12,7 +12,6 @@ public class TutorialGameManager : MonoBehaviour
     {
         if (player.GetComponent<Player>().currentHealth <= 0)
         {
-            Debug.Log("Player is dead");
             SceneManager.LoadScene("Tutorial");
         }
     }

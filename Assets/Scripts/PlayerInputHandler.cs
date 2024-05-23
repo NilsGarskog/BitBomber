@@ -18,11 +18,6 @@ public class PlayerInputHandler : MonoBehaviour
     private void Awake()
     {
         playerInput = GetComponent<PlayerInput>();
-        /*
-        Debug.Log("PlayerInputHandler Awake");
-        Debug.Log(playerInput);
-        Debug.Log(playerInput.playerIndex);
-        */
         var movers = FindObjectsOfType<Mover>();
         var bombControllers = FindObjectsOfType<BombController>();
         var bowControllers = FindObjectsOfType<BowController>();
@@ -66,7 +61,7 @@ public class PlayerInputHandler : MonoBehaviour
         }
     }
 
-      public void OnSkullDrop(InputAction.CallbackContext context)
+    public void OnSkullDrop(InputAction.CallbackContext context)
     {
         if (context.started)
         {

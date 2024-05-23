@@ -14,6 +14,7 @@ public class Mover : MonoBehaviour
     //public Rigidbody2D rigidbody { get; private set; }
     private Rigidbody2D rigidbody;
     private EndGameTiles endGameTiles;
+    private bool isDead = false;
 
     private Vector2 moveDirection = Vector2.zero;
     private Vector2 inputVector = Vector2.zero;
@@ -132,53 +133,44 @@ public class Mover : MonoBehaviour
     {
         Player player = GetComponent<Player>();
 
-        if (other.gameObject.tag == "Death")
+        if (other.gameObject.tag == "Death" && !isDead)
         {
             DeathSequence();
         }
 
-        if ((other.gameObject.layer == LayerMask.NameToLayer("Explosion") || other.gameObject.layer == LayerMask.NameToLayer("Arrow") || other.gameObject.layer == LayerMask.NameToLayer("Skull")) && player.isShielded == false)
+        if ((other.gameObject.layer == LayerMask.NameToLayer("Explosion") || other.gameObject.layer == LayerMask.NameToLayer("Arrow") || other.gameObject.layer == LayerMask.NameToLayer("Skull")) && player.isShielded == false && !isDead)
         {
 
 
             if (player != null)
 
             {
+                if (other.gameObject.layer == LayerMask.NameToLayer("Arrow"))
+                {
+                    if (other.gameObject.GetComponent<Arrow>().shooterIndex != playerIndex)
+                    {
+                        player.TakeDamage(50);
+                        audioManager.arrowHit();
+                    }
+                    else
+                    {
+                        player.TakeDamage(0);
+                    }
+                }
+                if (other.gameObject.layer == LayerMask.NameToLayer("Skull"))
+                {
+                    player.TakeDamage(50);
+                    audioManager.skullHit();
+                }
+
+                if (other.gameObject.layer == LayerMask.NameToLayer("Explosion"))
+                {
+                    player.TakeDamage(20);
+                }
+
                 if (player.currentHealth <= 0)
                 {
                     DeathSequence();
-                }
-                else
-                {
-                    if (other.gameObject.layer == LayerMask.NameToLayer("Arrow"))
-                    {
-                        if (other.gameObject.GetComponent<Arrow>().shooterIndex != playerIndex)
-                        {
-                            player.TakeDamage(50);
-                            audioManager.arrowHit();
-                        }
-                        else
-                        {
-                            player.TakeDamage(0);
-                        }
-                    }
-                    if (other.gameObject.layer == LayerMask.NameToLayer("Skull"))
-                    {
-                        player.TakeDamage(50);
-                        audioManager.skullHit();
-                    }
-
-                    if (other.gameObject.layer == LayerMask.NameToLayer("Explosion"))
-                    {
-                        player.TakeDamage(20);
-                    }
-
-                    if (player.currentHealth <= 0)
-                    {
-                        DeathSequence();
-                    }
-
-
                 }
             }
         }
@@ -194,6 +186,7 @@ public class Mover : MonoBehaviour
         }
         else
         {
+            isDead = true;
             endGameTiles.addDeath();
             enabled = false;
             GetComponent<BombController>().enabled = false;
