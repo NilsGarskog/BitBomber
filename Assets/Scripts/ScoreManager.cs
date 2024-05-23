@@ -53,6 +53,7 @@ public class ScoreManager : MonoBehaviour
             SpriteRenderer spriteRenderer = playerObjects[i].GetComponent<SpriteRenderer>();
             if (spriteRenderer != null)
             {
+
                 int spriteIndex = Mathf.Clamp(reversedScoreBoard[i], 0, playerSpritesArray.Length - 1);
                 spriteRenderer.sprite = playerSpritesArray[spriteIndex];
             }

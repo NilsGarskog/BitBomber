@@ -9,22 +9,34 @@ public class EndGameTiles : MonoBehaviour
     public GameObject blockPreFab;
     private float timeBetween = 0.4f;
     public AudioManagerMainScene audioManager;
+    public GameObject endGameText;
+    public GameObject[] players;
+    private GameManager gameManager;
+    private SpawnItemTimer spawnItemTimer;
+    private bool EndGameStarted = false;
 
-    /*
-        void Start()
-        {
-            StartCoroutine(CreateBlocks());
 
-        }
-    */
-
-    public void startEndGame()
+    void Start()
     {
-        StartCoroutine(CreateBlocks());
+        spawnItemTimer = FindAnyObjectByType<SpawnItemTimer>();
+        gameManager = FindAnyObjectByType<GameManager>();
     }
 
-    IEnumerator CreateBlocks()
+    void Update()
     {
+        if (gameManager.activePlayerIndices.Count <= 2 && !EndGameStarted && spawnItemTimer.timer)
+        {
+            EndGameStarted = true;
+            StartCoroutine(startEndGame());
+        }
+    }
+
+
+    IEnumerator startEndGame()
+    {
+        yield return new WaitForSeconds(5f);
+        endGameText.SetActive(true);
+
         audioManager.suddenDeath();
         for (int i = -5; i < 6; i++)
         {
